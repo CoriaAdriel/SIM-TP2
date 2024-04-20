@@ -59,16 +59,16 @@ namespace TP2_SIM.Generadores.Uniforme
                 // Asignamos cada valor del formulario en la clase Uniforme
                 uniforme.N = Convert.ToInt32(txtN.GetNumericValue());
                 uniforme.Desde = Convert.ToDouble(txtDesde.GetNumericValue());
-                uniforme.Hasta = Convert.ToDouble(txtHasta.GetNumericValue());
-                uniforme.Desde = Convert.ToDouble(txtDesde.GetNumericValue());                
+                uniforme.Hasta = Convert.ToDouble(txtHasta.GetNumericValue());             
                 uniforme.Grafico = chtUniforme;
 
                 // Generar Números aleatorios Uniforme
                 uniforme.GenerarDistribucionUniforme();
-                uniforme.GenerarGrafico();
+                uniforme.GenerarGrafico(uniforme.CantidadIntervalos);
 
                 // Actualizar el gráfico con la nueva cantidad de intervalos
                 uniforme.ActualizarGrafico(uniforme.CantidadIntervalos);
+
 
                 // Mostramos un mensaje de números generados con éxito
                 MessageBox.Show("Se ha generado los rnd con éxito", "Distribución Uniforme", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -96,7 +96,8 @@ namespace TP2_SIM.Generadores.Uniforme
 
         private void btnPruebaChi_Click(object sender, EventArgs e)
         {
-
+            ChiCuadrado ventanaChiCuadrado = new ChiCuadrado();
+            ventanaChiCuadrado.Show();
         }
 
         private void btnVerRandom_Click(object sender, EventArgs e)

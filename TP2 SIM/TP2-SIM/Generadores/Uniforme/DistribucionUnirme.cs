@@ -49,12 +49,13 @@ namespace TP2_SIM.Generadores.Uniforme
             return A + RND * (B-A);
         }
 
-        public List<(string etiqueta, int frecuencia)> GenerarGrafico()
+        public List<(string etiqueta, int frecuencia)> GenerarGrafico(int nuevaCantidadIntervalos)
         {
             Grafico.Series.Clear();
 
             double limInferior = 0;
             double limSuperior= 0;
+            CantidadIntervalos = nuevaCantidadIntervalos;
 
 
             double valorMaximo = NumerosUniformes.Max();
@@ -73,7 +74,7 @@ namespace TP2_SIM.Generadores.Uniforme
                 datosGrafico.Add((etiquetaIntervalo, frecuenciaObservada));
 
                 Series serie = Grafico.Series.Add(etiquetaIntervalo);
-                serie.Points.AddXY("Intervalos", frecuenciaObservada);
+                serie.Points.AddXY(etiquetaIntervalo, frecuenciaObservada);
             }
 
             return datosGrafico;
@@ -85,7 +86,7 @@ namespace TP2_SIM.Generadores.Uniforme
 
             foreach (double valor in ListaDatos)
             {
-                if (limite_inferior <= valor && valor <= limite_superior)
+                if (limite_inferior <= valor && valor < limite_superior)
                 {
                     frecuenciaObservada++;
                 }
@@ -97,7 +98,7 @@ namespace TP2_SIM.Generadores.Uniforme
         {
             CantidadIntervalos = nuevaCantidadIntervalos;
             Grafico.Series.Clear();
-            GenerarGrafico();
+            GenerarGrafico(CantidadIntervalos);
         }
     }
 }
