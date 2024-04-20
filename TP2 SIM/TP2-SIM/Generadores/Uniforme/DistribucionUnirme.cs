@@ -34,7 +34,7 @@ namespace TP2_SIM.Generadores.Uniforme
                 {
                     double rnd = GenerarAleatorio();
                     double rndUniforme = GenerarDistribucionUniforme(Desde, Hasta, rnd);
-                    double filtroRndUniforme = Math.Truncate(rndUniforme * 10000) / 100000;
+                    double filtroRndUniforme = Math.Truncate(rndUniforme * 100000) / 100000;
 
                     NumerosUniformes.Add(filtroRndUniforme);
                 }
