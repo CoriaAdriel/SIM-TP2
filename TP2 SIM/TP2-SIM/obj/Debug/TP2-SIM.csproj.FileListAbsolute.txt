@@ -14,3 +14,19 @@ C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\ORIGINAL\TP2-
 C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\ORIGINAL\TP2-SIM\TP2-SIM\obj\Debug\TP2_SIM.PruebaDeBondad.ChiCuadrado.ChiCuadrado.resources
 C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\ORIGINAL\TP2-SIM\TP2-SIM\obj\Debug\TP2_SIM.ControlesEspeciales.DataGridViewCustom.resources
 C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\ORIGINAL\TP2-SIM\TP2-SIM\obj\Debug\TP2_SIM.Formularios.Randoms.Randoms.resources
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\bin\Debug\TP2-SIM.exe.config
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\bin\Debug\TP2-SIM.exe
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\bin\Debug\TP2-SIM.pdb
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2-SIM.csproj.AssemblyReference.cache
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2_SIM.ControlesEspeciales.DataGridViewCustom.resources
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2_SIM.ControlesEspeciales.NumericTextBox.resources
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2_SIM.FrmBase.resources
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2_SIM.Formularios.Principal.Principal.resources
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2_SIM.Formularios.Randoms.Randoms.resources
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2_SIM.Generadores.Uniforme.Uniforme.resources
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2_SIM.Properties.Resources.resources
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2_SIM.PruebaDeBondad.ChiCuadrado.ChiCuadrado.resources
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2-SIM.csproj.GenerateResource.cache
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2-SIM.csproj.CoreCompileInputs.cache
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2-SIM.exe
+C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIM-TP2\TP2 SIM\TP2-SIM\obj\Debug\TP2-SIM.pdb

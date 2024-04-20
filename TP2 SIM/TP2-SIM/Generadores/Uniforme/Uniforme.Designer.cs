@@ -44,13 +44,13 @@ namespace TP2_SIM.Generadores.Uniforme
             this.btnVerRandom = new System.Windows.Forms.Button();
             this.txtDesde = new TP2_SIM.ControlesEspeciales.NumericTextBox();
             this.txtHasta = new TP2_SIM.ControlesEspeciales.NumericTextBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.chtUniforme = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.rd10 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.rd23 = new System.Windows.Forms.RadioButton();
+            this.rd16 = new System.Windows.Forms.RadioButton();
+            this.rd12 = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.chtUniforme)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -191,42 +191,42 @@ namespace TP2_SIM.Generadores.Uniforme
             this.txtHasta.Size = new System.Drawing.Size(49, 48);
             this.txtHasta.TabIndex = 2;
             // 
-            // chart1
+            // chtUniforme
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chtUniforme.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 155);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            this.chtUniforme.Legends.Add(legend1);
+            this.chtUniforme.Location = new System.Drawing.Point(12, 155);
+            this.chtUniforme.Name = "chtUniforme";
+            this.chtUniforme.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             series1.YValuesPerPoint = 6;
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(726, 231);
-            this.chart1.TabIndex = 7;
-            this.chart1.Text = "chart1";
+            this.chtUniforme.Series.Add(series1);
+            this.chtUniforme.Size = new System.Drawing.Size(726, 231);
+            this.chtUniforme.TabIndex = 7;
+            this.chtUniforme.Text = "chart1";
             // 
-            // radioButton1
+            // rd10
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(40, 24);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(43, 23);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "10";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rd10.AutoSize = true;
+            this.rd10.Location = new System.Drawing.Point(40, 24);
+            this.rd10.Name = "rd10";
+            this.rd10.Size = new System.Drawing.Size(43, 23);
+            this.rd10.TabIndex = 8;
+            this.rd10.TabStop = true;
+            this.rd10.Text = "10";
+            this.rd10.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rd23);
+            this.groupBox1.Controls.Add(this.rd16);
+            this.groupBox1.Controls.Add(this.rd12);
+            this.groupBox1.Controls.Add(this.rd10);
             this.groupBox1.ForeColor = System.Drawing.Color.Silver;
             this.groupBox1.Location = new System.Drawing.Point(425, 392);
             this.groupBox1.Name = "groupBox1";
@@ -235,38 +235,38 @@ namespace TP2_SIM.Generadores.Uniforme
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cantidad de Intervalos";
             // 
-            // radioButton2
+            // rd23
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(107, 24);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(43, 23);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "12";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rd23.AutoSize = true;
+            this.rd23.Location = new System.Drawing.Point(220, 24);
+            this.rd23.Name = "rd23";
+            this.rd23.Size = new System.Drawing.Size(43, 23);
+            this.rd23.TabIndex = 11;
+            this.rd23.TabStop = true;
+            this.rd23.Text = "23";
+            this.rd23.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rd16
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(166, 24);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(43, 23);
-            this.radioButton3.TabIndex = 10;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "16";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rd16.AutoSize = true;
+            this.rd16.Location = new System.Drawing.Point(166, 24);
+            this.rd16.Name = "rd16";
+            this.rd16.Size = new System.Drawing.Size(43, 23);
+            this.rd16.TabIndex = 10;
+            this.rd16.TabStop = true;
+            this.rd16.Text = "16";
+            this.rd16.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rd12
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(220, 24);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(43, 23);
-            this.radioButton4.TabIndex = 11;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "23";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rd12.AutoSize = true;
+            this.rd12.Location = new System.Drawing.Point(107, 24);
+            this.rd12.Name = "rd12";
+            this.rd12.Size = new System.Drawing.Size(43, 23);
+            this.rd12.TabIndex = 9;
+            this.rd12.TabStop = true;
+            this.rd12.Text = "12";
+            this.rd12.UseVisualStyleBackColor = true;
             // 
             // Uniforme
             // 
@@ -274,7 +274,7 @@ namespace TP2_SIM.Generadores.Uniforme
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 476);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chtUniforme);
             this.Controls.Add(this.txtHasta);
             this.Controls.Add(this.txtDesde);
             this.Controls.Add(this.btnVerRandom);
@@ -291,7 +291,7 @@ namespace TP2_SIM.Generadores.Uniforme
             this.Text = "DISTRIBUCIÓN UNIFORME";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Uniforme_FormClosed);
             this.Load += new System.EventHandler(this.Uniforme_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chtUniforme)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -312,11 +312,11 @@ namespace TP2_SIM.Generadores.Uniforme
         private System.Windows.Forms.Button btnVerRandom;
         private ControlesEspeciales.NumericTextBox txtDesde;
         private ControlesEspeciales.NumericTextBox txtHasta;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chtUniforme;
+        private System.Windows.Forms.RadioButton rd10;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rd23;
+        private System.Windows.Forms.RadioButton rd16;
+        private System.Windows.Forms.RadioButton rd12;
     }
 }
