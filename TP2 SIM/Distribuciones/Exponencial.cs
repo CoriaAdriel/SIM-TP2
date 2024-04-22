@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -20,18 +21,16 @@ namespace TP2_SIM.Distribuciones
         public DataGridView Grilla { get; set; }
 
         private Random rnd = new Random();
-        /// <summary>
+
+
         /// Nos permite realizar la generación de número aleatorio RND[0,1).
-        /// </summary>
-        /// <returns></returns>
         public double GenerarAleatorio()
         {
             //Genera numeros aleatorios entre 0 y 1 sin llegar a 1
             return rnd.NextDouble();
         }
-        /// <summary>
+
         /// Nos permite genera los RND de variables aleatorias exponenciales, generar el histograma, calculo de K-S y carga de grilla.
-        /// </summary>
         public void GenerarDistribucion()
         {
             //Generamos la distibucion Exponencial Negativa con el metodo de la transformada inversa
@@ -51,10 +50,8 @@ namespace TP2_SIM.Distribuciones
             //Agregamos la lista de variables generadas al DataGridView para poder visualizarlos
             CargarGrillaDatos(Datos);
         }
-        /// <summary>
+
         /// Nos permite cargar los RND(Exponencial) en la grilla de muestra
-        /// </summary>
-        /// <param name="Datos"></param>
         public void CargarGrillaDatos(List<double> Datos)
         {
             Grilla.Rows.Clear();
@@ -65,9 +62,8 @@ namespace TP2_SIM.Distribuciones
                 Grilla.Rows.Add(Datos[i]);
             }
         }
-        /// <summary>
+
         /// Nos permite realizar la generación del histograma.
-        /// </summary>
         public void GenerarHistograma()
         {
 
@@ -122,9 +118,8 @@ namespace TP2_SIM.Distribuciones
             }
 
         }
-        /// <summary>
+
         /// Nos permite calcular el valor de K-S.
-        /// </summary>
         public void CalcularKS()
         {
             PruebaKS.Rows.Clear();
@@ -199,14 +194,12 @@ namespace TP2_SIM.Distribuciones
 
                 PruebaKS.Rows.Add(limiteInferior, limiteSuperior, frecuenciaObservada, frecuenciaEsperada, probabilidadObservadaAcumulada, probabilidadEsperadaAcumulada, calcKS, maxXS);
             }
+
+            //Resalta el valor de KS final calculado
+            PruebaKS.Rows[(PruebaKS.RowCount - 1)].Cells[(PruebaKS.ColumnCount - 1)].Style.BackColor = Color.Coral;
         }
-        /// <summary>
+
         /// Nos permite realizar la frecuencia observada.
-        /// </summary>
-        /// <param name="ListaDatos"></param>
-        /// <param name="limite_inferior"></param>
-        /// <param name="limite_superior"></param>
-        /// <returns></returns>
         public int DeterminarFrecuenciaObservada(List<double> ListaDatos, double limite_inferior, double limite_superior)
         {
 
@@ -222,23 +215,16 @@ namespace TP2_SIM.Distribuciones
 
             return frecuenciaObservada;
         }
-        /// <summary>
+
         /// Nos permite calcular la frecuencia esparada.
-        /// </summary>
-        /// <param name="limiteInferior"></param>
-        /// <param name="limiteSuperior"></param>
-        /// <returns></returns>
         public double CalcularFrecuenciaEsperada(double limiteInferior, double limiteSuperior)
         {
             double frecuenciaEsperada = CalcularProbabilidadEsperada(limiteInferior, limiteSuperior) * CantidadMuestra;
             return frecuenciaEsperada;
         }
-        /// <summary>
-        /// Nos permite calcular probabilidad acumulada utilizando la función de acumulación.
-        /// </summary>
-        /// <param name="limiteInferior"></param>
-        /// <param name="limiteSuperior"></param>
-        /// <returns></returns>
+
+
+        /// Nos permite calcular probabilidad esperada
         public double CalcularProbabilidadEsperada(double limiteInferior, double limiteSuperior)
         {
             //Usamos la formula de la acumulada para distibuciones exponencial negativa
