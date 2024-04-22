@@ -53,6 +53,14 @@ namespace TP2_SIM
             txtLambda.Clear();
         }
 
+        private void cbIntervalos_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            chartDistribucion.Hide();
+            dgvMuestra.Hide();
+            gbChi.Visible = false;
+            gbKS.Visible = false;
+        }
+
         private void cbDistribucion_SelectionChangeCommitted(object sender, EventArgs e)
         {
             //Selecciona Uniforme = 0
@@ -176,6 +184,21 @@ namespace TP2_SIM
 
         }
 
+        private void dgvMuestra_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            var grilla = sender as DataGridView;
+            var rowIndex = (e.RowIndex + 1).ToString();
+
+            var centerformat = new StringFormat()
+            {
+                //alinea el numero de fila
+                Alignment = StringAlignment.Center,
+                LineAlignment = StringAlignment.Center,
+            };
+
+            var headerBounds = new Rectangle(e.RowBounds.Left, e.RowBounds.Top, grilla.RowHeadersWidth, e.RowBounds.Height);
+            e.Graphics.DrawString(rowIndex, this.Font, SystemBrushes.ControlText, headerBounds, centerformat);
+        }
     }
 
 }

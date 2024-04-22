@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblIngreseDatos = new System.Windows.Forms.Label();
@@ -281,19 +281,20 @@
             this.cbIntervalos.Name = "cbIntervalos";
             this.cbIntervalos.Size = new System.Drawing.Size(100, 24);
             this.cbIntervalos.TabIndex = 22;
+            this.cbIntervalos.SelectionChangeCommitted += new System.EventHandler(this.cbIntervalos_SelectionChangeCommitted);
             // 
             // chartDistribucion
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartDistribucion.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartDistribucion.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chartDistribucion.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartDistribucion.Legends.Add(legend3);
             this.chartDistribucion.Location = new System.Drawing.Point(12, 202);
             this.chartDistribucion.Name = "chartDistribucion";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartDistribucion.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartDistribucion.Series.Add(series3);
             this.chartDistribucion.Size = new System.Drawing.Size(710, 392);
             this.chartDistribucion.TabIndex = 28;
             this.chartDistribucion.Text = "chart1";
@@ -303,10 +304,12 @@
             this.dgvMuestra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMuestra.Location = new System.Drawing.Point(762, 12);
             this.dgvMuestra.Name = "dgvMuestra";
+            this.dgvMuestra.ReadOnly = true;
             this.dgvMuestra.RowHeadersWidth = 51;
             this.dgvMuestra.RowTemplate.Height = 24;
             this.dgvMuestra.Size = new System.Drawing.Size(240, 582);
             this.dgvMuestra.TabIndex = 29;
+            this.dgvMuestra.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvMuestra_RowPostPaint);
             // 
             // gbChi
             // 
@@ -329,6 +332,7 @@
             this.ChiAcumulado});
             this.dgvChi.Location = new System.Drawing.Point(6, 21);
             this.dgvChi.Name = "dgvChi";
+            this.dgvChi.ReadOnly = true;
             this.dgvChi.RowHeadersWidth = 51;
             this.dgvChi.RowTemplate.Height = 24;
             this.dgvChi.Size = new System.Drawing.Size(587, 272);
@@ -397,6 +401,7 @@
             this.MaxKS});
             this.dgvKS.Location = new System.Drawing.Point(6, 21);
             this.dgvKS.Name = "dgvKS";
+            this.dgvKS.ReadOnly = true;
             this.dgvKS.RowHeadersWidth = 51;
             this.dgvKS.RowTemplate.Height = 24;
             this.dgvKS.Size = new System.Drawing.Size(587, 250);
