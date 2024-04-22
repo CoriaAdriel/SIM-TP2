@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Forms;
-using System.Collections;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace TP2_SIM.Distribuciones
 {
-    internal class Normal
+    public class Normal
     {
-        public int CantidadMuestra { get; set; }
+        // Atributos de la clase
+        public double CantidadMuestra { get; set; }
         public double Desviacion { get; set; }
         public double Media { get; set; }
         public int CantidadIntervalos { get; set; }
@@ -24,12 +22,18 @@ namespace TP2_SIM.Distribuciones
 
         private Random rnd = new Random();
 
+        /// <summary>
+        /// Nos permite generar números randoms entre RND[0,1)
+        /// </summary>
+        /// <returns></returns>
         public double GenerarAleatorio()
         {
             //Genera numeros aleatorios entre 0 y 1 sin llegar a 1
             return rnd.NextDouble();
         }
-
+        /// <summary>
+        /// Nos permite generar la distribución utilizando el método de Box-Muller, histograma, calculo del K-S y cargar la grilla
+        /// </summary>
         public void GenerarDistribucion()
         {
             //Usamos el metodo de Box-Muller, por lo que necesitamos generar 2 randoms a la vez
@@ -61,7 +65,10 @@ namespace TP2_SIM.Distribuciones
             CargarGrillaDatos(Datos);
 
         }
-
+        /// <summary>
+        /// Nos permite representar los datos generados de forma Normal en la grilla de muestra.
+        /// </summary>
+        /// <param name="Datos"></param>
         public void CargarGrillaDatos(List<double> Datos)
         {
             Grilla.Rows.Clear();
@@ -72,7 +79,9 @@ namespace TP2_SIM.Distribuciones
                 Grilla.Rows.Add(Datos[i]);
             }
         }
-
+        /// <summary>
+        /// Nos permite generar el Gráfico de la Normal.
+        /// </summary>
         public void GenerarHistograma()
         {
 
@@ -131,9 +140,10 @@ namespace TP2_SIM.Distribuciones
                 serie.Points.AddXY("Intervalos", frecuenciaObservada);
 
             }
-
         }
-
+        /// <summary>
+        /// Nos permite calcular el valor de K-S
+        /// </summary>
         public void CalcularKS()
         {
             PruebaKS.Rows.Clear();
@@ -212,7 +222,13 @@ namespace TP2_SIM.Distribuciones
                 PruebaKS.Rows.Add(limiteInferior, limiteSuperior, frecuenciaObservada, frecuenciaEsperada, probabilidadObservadaAcumulada, probabilidadEsperadaAcumulada, calcKS, maxXS);
             }
         }
-
+        /// <summary>
+        /// Nos permite calcular las frecuencia observadas.
+        /// </summary>
+        /// <param name="ListaDatos"></param>
+        /// <param name="limite_inferior"></param>
+        /// <param name="limite_superior"></param>
+        /// <returns></returns>
         public int DeterminarFrecuenciaObservada(List<double> ListaDatos, double limite_inferior, double limite_superior)
         {
 
@@ -228,13 +244,25 @@ namespace TP2_SIM.Distribuciones
 
             return frecuenciaObservada;
         }
-
+        /// <summary>
+        /// Nos permite calcular la frecuencia esperada.
+        /// </summary>
+        /// <param name="limiteInferior"></param>
+        /// <param name="limiteSuperior"></param>
+        /// <param name="marcaClase"></param>
+        /// <returns></returns>
         public double CalcularFrecuenciaEsperada(double limiteInferior, double limiteSuperior, double marcaClase)
         {
             double frecuenciaEsperada = CalcularProbabilidadEsperada(limiteInferior, limiteSuperior, marcaClase)* CantidadMuestra;
             return frecuenciaEsperada;
         }
-
+        /// <summary>
+        /// Nos permite calcular la función de acumulación de la Normal(Utilizando Marca de clase).
+        /// </summary>
+        /// <param name="limiteInferior"></param>
+        /// <param name="limiteSuperior"></param>
+        /// <param name="marcaClase"></param>
+        /// <returns></returns>
         public double CalcularProbabilidadEsperada(double limiteInferior, double limiteSuperior, double marcaClase)
         {
             //Usamos el calculo de la densidad para distribucion Normal

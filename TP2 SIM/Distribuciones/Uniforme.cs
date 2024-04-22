@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Forms;
-using System.Collections;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace TP2_SIM.Distribuciones
 {
-    internal class Uniforme
+    public class Uniforme
     {
+        // Atributos de la clase
         public double CantidadMuestra { get; set; }
         public double A { get; set; }
         public double B { get; set; }
@@ -24,12 +22,18 @@ namespace TP2_SIM.Distribuciones
 
         private Random rnd = new Random();
 
+        /// <summary>
+        /// Método que nos permite generar un número aleatorios entre RND[0,1)
+        /// </summary>
+        /// <returns></returns>
         public double GenerarAleatorio()
         {
             //Genera numeros aleatorios entre 0 y 1 sin llegar a 1
             return rnd.NextDouble();
         }
-
+        /// <summary>
+        /// Nos permite generar la distribución uniforme, cargar el histograma, calcular el CHI, K-S y cargar la grilla.
+        /// </summary>
         public void GenerarDistribucion()
         {
             //Generamos los datos con el metodo de la transformada inversa
@@ -60,8 +64,11 @@ namespace TP2_SIM.Distribuciones
             }
 
         }
-
-        public void CargarGrillaDatos(List<double> Datos) 
+        /// <summary>
+        /// Nos permite cargar cada uno de los RND(uniforme) en la grilla de muestra.
+        /// </summary>
+        /// <param name="Datos"></param>
+        public void CargarGrillaDatos(List<double> Datos)
         {
             Grilla.Rows.Clear();
             Grilla.Columns.Clear();
@@ -71,7 +78,9 @@ namespace TP2_SIM.Distribuciones
                 Grilla.Rows.Add(Datos[i]);
             }
         }
-
+        /// <summary>
+        /// Nos permite generar la gráfica de los valores generados.
+        /// </summary>
         public void GenerarHistograma()
         {
 
@@ -129,7 +138,9 @@ namespace TP2_SIM.Distribuciones
             }
 
         }
-
+        /// <summary>
+        /// Nos permite calcular el valor K-S
+        /// </summary>
         public void CalcularKS()
         {
             PruebaKS.Rows.Clear();
@@ -205,7 +216,13 @@ namespace TP2_SIM.Distribuciones
                 PruebaKS.Rows.Add(limiteInferior, limiteSuperior, frecuenciaObservada, frecuenciaEsperada, probabilidadObservadaAcumulada, probabilidadEsperadaAcumulada, calcKS, maxXS);
             }
         }
-
+        /// <summary>
+        /// Nos permite calcular la frecuencia observada.
+        /// </summary>
+        /// <param name="ListaDatos"></param>
+        /// <param name="limite_inferior"></param>
+        /// <param name="limite_superior"></param>
+        /// <returns></returns>
         public int DeterminarFrecuenciaObservada(List<double> ListaDatos, double limite_inferior, double limite_superior)
         {
 
@@ -221,7 +238,10 @@ namespace TP2_SIM.Distribuciones
 
             return frecuenciaObservada;
         }
-
+        /// <summary>
+        /// Nos permite calcular la frecuencia esperada.
+        /// </summary>
+        /// <returns></returns>
         public double CalcularFrecuenciaEsperada()
         {
             return CantidadMuestra / CantidadIntervalos;
