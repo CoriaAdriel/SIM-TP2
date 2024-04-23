@@ -196,6 +196,7 @@ namespace TP2_SIM.Distribuciones
                 frecuenciaEsperada = Math.Truncate(frecuenciaEsperada * 10000) / 10000;
 
                 chiCuadrado = Math.Truncate(chiCuadrado * 10000) / 10000;
+                chiCuadradoAcumulado = Math.Truncate(chiCuadrado * 10000) / 10000;
 
                 limitesInferiores.Add(limiteInferior);
                 limitesSuperiores.Add(limiteSuperior);
@@ -236,7 +237,7 @@ namespace TP2_SIM.Distribuciones
 
 
                         chiCuadrado = Math.Truncate(chiCuadrado * 10000) / 10000;
-                        chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 1000) / 1000;
+                        chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 10000) / 10000;
 
                         PruebaChi.Rows.Add(limiteInferior, limiteSuperior, frecuenciaObservadaAcumulada, frecuenciaEsperadaAcumulada, chiCuadrado, chiCuadradoAcumulado);
                         frecuenciaEsperadaAcumulada = 0;
@@ -259,7 +260,7 @@ namespace TP2_SIM.Distribuciones
                         chiCuadradoAcumulado = penultimoChiAcumulado + chiCuadrado;
 
                         chiCuadrado = Math.Truncate(chiCuadrado * 10000) / 10000;
-                        chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 1000) / 1000;
+                        chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 10000) / 10000;
 
                         PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[1].Value = limitesSuperiores[i];
                         PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[2].Value = nuevaFrecuenciaObservada;

@@ -137,7 +137,6 @@
             this.cbDistribucion.Name = "cbDistribucion";
             this.cbDistribucion.Size = new System.Drawing.Size(146, 25);
             this.cbDistribucion.TabIndex = 2;
-            this.cbDistribucion.SelectedIndexChanged += new System.EventHandler(this.cbDistribucion_SelectedIndexChanged);
             this.cbDistribucion.SelectionChangeCommitted += new System.EventHandler(this.cbDistribucion_SelectionChangeCommitted);
             // 
             // label4

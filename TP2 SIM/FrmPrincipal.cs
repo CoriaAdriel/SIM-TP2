@@ -7,18 +7,15 @@ namespace TP2_SIM
 {
     public partial class Principal : Form
     {
-        /// <summary>
         /// Constructor de la clase Principal
-        /// </summary>
         public Principal()
         {
             InitializeComponent();
 
             OcultarDatos();
         }
-        /// <summary>
+
         /// Método que nos permite ocultar todos los datos visuales.
-        /// </summary>
         private void OcultarDatos()
         {            
             lblIngreseDatos.Hide();
@@ -31,9 +28,8 @@ namespace TP2_SIM
             gbChi.Visible = false;
             gbKS.Visible = false;
         }
-        /// <summary>
+
         /// Método que nos permite mostrar todos los datos visuales.
-        /// </summary>
         private void MostrarDatos()
         {
             chartDistribucion.Show();
@@ -41,9 +37,8 @@ namespace TP2_SIM
             gbChi.Visible = true;
             gbKS.Visible = true;
         }
-        /// <summary>
+
         /// Método que no permite limpíar todos los campos requeridos.
-        /// </summary>
         private void LimpiarCampos()
         {
             txtA.Clear();
@@ -52,11 +47,8 @@ namespace TP2_SIM
             txtMedia.Clear();
             txtLambda.Clear();
         }
-        /// <summary>
-        /// Nos permite ocultar elementos del formualrio
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
+        /// Nos permite ocultar elementos del formualrio cuando se cambia de seleccion de intervalos
         private void cbIntervalos_SelectionChangeCommitted(object sender, EventArgs e)
         {
             chartDistribucion.Hide();
@@ -64,11 +56,8 @@ namespace TP2_SIM
             gbChi.Visible = false;
             gbKS.Visible = false;
         }
-        /// <summary>
+
         /// Método que nos permite cargar la distribución.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void cbDistribucion_SelectionChangeCommitted(object sender, EventArgs e)
         {
             //Selecciona Uniforme = 0
@@ -109,20 +98,16 @@ namespace TP2_SIM
                 
             }
         }
-        /// <summary>
+
         /// Método que nos permite realizar la ejecución completa de cada una de las distribuciones
         /// utilizando el evento del botón: btnGenerar_Click
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             ActivarGeneracion();
             MostrarDatos();
         }
-        /// <summary>
+
         /// Método que nos permite activar la generación de cada una de las distribuciones.
-        /// </summary>
         public void ActivarGeneracion()
         {
             if (cbDistribucion.SelectedIndex == 0)
@@ -215,10 +200,6 @@ namespace TP2_SIM
             e.Graphics.DrawString(rowIndex, this.Font, SystemBrushes.ControlText, headerBounds, centerformat);
         }
 
-        private void cbDistribucion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }
