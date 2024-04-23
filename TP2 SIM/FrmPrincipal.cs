@@ -215,6 +215,10 @@ namespace TP2_SIM
             e.Graphics.DrawString(rowIndex, this.Font, SystemBrushes.ControlText, headerBounds, centerformat);
         }
 
+        private void cbDistribucion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

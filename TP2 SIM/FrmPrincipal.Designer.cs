@@ -62,6 +62,12 @@
             this.dgvMuestra = new System.Windows.Forms.DataGridView();
             this.gbChi = new System.Windows.Forms.GroupBox();
             this.dgvChi = new System.Windows.Forms.DataGridView();
+            this.DesdeChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HastaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FrecObsChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FrecEspChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Chi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChiAcumulado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbKS = new System.Windows.Forms.GroupBox();
             this.dgvKS = new System.Windows.Forms.DataGridView();
             this.DesdeKS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,12 +79,6 @@
             this.CalcKS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaxKS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbIngresoDatos = new System.Windows.Forms.GroupBox();
-            this.DesdeChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HastaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FrecObsChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FrecEspChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Chi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChiAcumulado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbUniforme.SuspendLayout();
             this.gbExponencial.SuspendLayout();
             this.gbNormal.SuspendLayout();
@@ -137,6 +137,7 @@
             this.cbDistribucion.Name = "cbDistribucion";
             this.cbDistribucion.Size = new System.Drawing.Size(146, 25);
             this.cbDistribucion.TabIndex = 2;
+            this.cbDistribucion.SelectedIndexChanged += new System.EventHandler(this.cbDistribucion_SelectedIndexChanged);
             this.cbDistribucion.SelectionChangeCommitted += new System.EventHandler(this.cbDistribucion_SelectionChangeCommitted);
             // 
             // label4
@@ -429,6 +430,58 @@
             this.dgvChi.Size = new System.Drawing.Size(513, 289);
             this.dgvChi.TabIndex = 0;
             // 
+            // DesdeChi
+            // 
+            this.DesdeChi.Frozen = true;
+            this.DesdeChi.HeaderText = "Desde";
+            this.DesdeChi.MinimumWidth = 6;
+            this.DesdeChi.Name = "DesdeChi";
+            this.DesdeChi.ReadOnly = true;
+            this.DesdeChi.Width = 71;
+            // 
+            // HastaChi
+            // 
+            this.HastaChi.Frozen = true;
+            this.HastaChi.HeaderText = "Hasta";
+            this.HastaChi.MinimumWidth = 6;
+            this.HastaChi.Name = "HastaChi";
+            this.HastaChi.ReadOnly = true;
+            this.HastaChi.Width = 68;
+            // 
+            // FrecObsChi
+            // 
+            this.FrecObsChi.Frozen = true;
+            this.FrecObsChi.HeaderText = "FrecObs";
+            this.FrecObsChi.MinimumWidth = 6;
+            this.FrecObsChi.Name = "FrecObsChi";
+            this.FrecObsChi.ReadOnly = true;
+            this.FrecObsChi.Width = 82;
+            // 
+            // FrecEspChi
+            // 
+            this.FrecEspChi.Frozen = true;
+            this.FrecEspChi.HeaderText = "FrecEsp";
+            this.FrecEspChi.MinimumWidth = 6;
+            this.FrecEspChi.Name = "FrecEspChi";
+            this.FrecEspChi.ReadOnly = true;
+            this.FrecEspChi.Width = 79;
+            // 
+            // Chi
+            // 
+            this.Chi.HeaderText = "c        ";
+            this.Chi.MinimumWidth = 6;
+            this.Chi.Name = "Chi";
+            this.Chi.ReadOnly = true;
+            this.Chi.Width = 71;
+            // 
+            // ChiAcumulado
+            // 
+            this.ChiAcumulado.HeaderText = "C(ac)";
+            this.ChiAcumulado.MinimumWidth = 6;
+            this.ChiAcumulado.Name = "ChiAcumulado";
+            this.ChiAcumulado.ReadOnly = true;
+            this.ChiAcumulado.Width = 64;
+            // 
             // gbKS
             // 
             this.gbKS.Controls.Add(this.dgvKS);
@@ -571,58 +624,6 @@
             this.gbIngresoDatos.TabIndex = 34;
             this.gbIngresoDatos.TabStop = false;
             this.gbIngresoDatos.Text = "Datos";
-            // 
-            // DesdeChi
-            // 
-            this.DesdeChi.Frozen = true;
-            this.DesdeChi.HeaderText = "Desde";
-            this.DesdeChi.MinimumWidth = 6;
-            this.DesdeChi.Name = "DesdeChi";
-            this.DesdeChi.ReadOnly = true;
-            this.DesdeChi.Width = 71;
-            // 
-            // HastaChi
-            // 
-            this.HastaChi.Frozen = true;
-            this.HastaChi.HeaderText = "Hasta";
-            this.HastaChi.MinimumWidth = 6;
-            this.HastaChi.Name = "HastaChi";
-            this.HastaChi.ReadOnly = true;
-            this.HastaChi.Width = 68;
-            // 
-            // FrecObsChi
-            // 
-            this.FrecObsChi.Frozen = true;
-            this.FrecObsChi.HeaderText = "FrecObs";
-            this.FrecObsChi.MinimumWidth = 6;
-            this.FrecObsChi.Name = "FrecObsChi";
-            this.FrecObsChi.ReadOnly = true;
-            this.FrecObsChi.Width = 82;
-            // 
-            // FrecEspChi
-            // 
-            this.FrecEspChi.Frozen = true;
-            this.FrecEspChi.HeaderText = "FrecEsp";
-            this.FrecEspChi.MinimumWidth = 6;
-            this.FrecEspChi.Name = "FrecEspChi";
-            this.FrecEspChi.ReadOnly = true;
-            this.FrecEspChi.Width = 79;
-            // 
-            // Chi
-            // 
-            this.Chi.HeaderText = "c        ";
-            this.Chi.MinimumWidth = 6;
-            this.Chi.Name = "Chi";
-            this.Chi.ReadOnly = true;
-            this.Chi.Width = 71;
-            // 
-            // ChiAcumulado
-            // 
-            this.ChiAcumulado.HeaderText = "C(ac)";
-            this.ChiAcumulado.MinimumWidth = 6;
-            this.ChiAcumulado.Name = "ChiAcumulado";
-            this.ChiAcumulado.ReadOnly = true;
-            this.ChiAcumulado.Width = 64;
             // 
             // Principal
             // 
