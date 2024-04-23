@@ -79,6 +79,7 @@
             this.CalcKS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaxKS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbIngresoDatos = new System.Windows.Forms.GroupBox();
+            this.txtResultados = new System.Windows.Forms.TextBox();
             this.gbUniforme.SuspendLayout();
             this.gbExponencial.SuspendLayout();
             this.gbNormal.SuspendLayout();
@@ -97,7 +98,7 @@
             this.label1.Location = new System.Drawing.Point(5, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 17);
+            this.label1.Size = new System.Drawing.Size(272, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese el tamaño de la muestra:";
             // 
@@ -107,7 +108,7 @@
             this.label2.Location = new System.Drawing.Point(5, 114);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 17);
+            this.label2.Size = new System.Drawing.Size(281, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Seleccione el tipo de distribucion:";
             // 
@@ -119,7 +120,7 @@
             this.lblIngreseDatos.Location = new System.Drawing.Point(425, 9);
             this.lblIngreseDatos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIngreseDatos.Name = "lblIngreseDatos";
-            this.lblIngreseDatos.Size = new System.Drawing.Size(151, 17);
+            this.lblIngreseDatos.Size = new System.Drawing.Size(196, 23);
             this.lblIngreseDatos.TabIndex = 2;
             this.lblIngreseDatos.Text = "Parametros Requeridos";
             // 
@@ -135,7 +136,7 @@
             this.cbDistribucion.Location = new System.Drawing.Point(244, 111);
             this.cbDistribucion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbDistribucion.Name = "cbDistribucion";
-            this.cbDistribucion.Size = new System.Drawing.Size(146, 25);
+            this.cbDistribucion.Size = new System.Drawing.Size(146, 29);
             this.cbDistribucion.TabIndex = 2;
             this.cbDistribucion.SelectionChangeCommitted += new System.EventHandler(this.cbDistribucion_SelectionChangeCommitted);
             // 
@@ -145,7 +146,7 @@
             this.label4.Location = new System.Drawing.Point(20, 54);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 17);
+            this.label4.Size = new System.Drawing.Size(86, 23);
             this.label4.TabIndex = 4;
             this.label4.Text = "A (desde)";
             // 
@@ -155,7 +156,7 @@
             this.label5.Location = new System.Drawing.Point(26, 85);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
+            this.label5.Size = new System.Drawing.Size(80, 23);
             this.label5.TabIndex = 5;
             this.label5.Text = "B (hasta)";
             // 
@@ -165,7 +166,7 @@
             this.label6.Location = new System.Drawing.Point(27, 64);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 17);
+            this.label6.Size = new System.Drawing.Size(75, 23);
             this.label6.TabIndex = 6;
             this.label6.Text = "Lambda";
             // 
@@ -175,7 +176,7 @@
             this.label7.Location = new System.Drawing.Point(37, 51);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
+            this.label7.Size = new System.Drawing.Size(60, 23);
             this.label7.TabIndex = 7;
             this.label7.Text = "Media";
             // 
@@ -185,7 +186,7 @@
             this.label8.Location = new System.Drawing.Point(12, 82);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 17);
+            this.label8.Size = new System.Drawing.Size(95, 23);
             this.label8.TabIndex = 8;
             this.label8.Text = "Desviacion";
             // 
@@ -195,7 +196,7 @@
             this.txtN.Location = new System.Drawing.Point(244, 28);
             this.txtN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtN.Name = "txtN";
-            this.txtN.Size = new System.Drawing.Size(146, 25);
+            this.txtN.Size = new System.Drawing.Size(146, 29);
             this.txtN.TabIndex = 0;
             // 
             // txtA
@@ -204,7 +205,7 @@
             this.txtA.Location = new System.Drawing.Point(98, 51);
             this.txtA.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(88, 25);
+            this.txtA.Size = new System.Drawing.Size(88, 29);
             this.txtA.TabIndex = 11;
             // 
             // txtB
@@ -213,7 +214,7 @@
             this.txtB.Location = new System.Drawing.Point(98, 82);
             this.txtB.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(88, 25);
+            this.txtB.Size = new System.Drawing.Size(88, 29);
             this.txtB.TabIndex = 12;
             // 
             // txtLambda
@@ -222,7 +223,7 @@
             this.txtLambda.Location = new System.Drawing.Point(97, 60);
             this.txtLambda.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtLambda.Name = "txtLambda";
-            this.txtLambda.Size = new System.Drawing.Size(88, 25);
+            this.txtLambda.Size = new System.Drawing.Size(88, 29);
             this.txtLambda.TabIndex = 13;
             // 
             // txtMedia
@@ -231,7 +232,7 @@
             this.txtMedia.Location = new System.Drawing.Point(97, 48);
             this.txtMedia.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMedia.Name = "txtMedia";
-            this.txtMedia.Size = new System.Drawing.Size(88, 25);
+            this.txtMedia.Size = new System.Drawing.Size(88, 29);
             this.txtMedia.TabIndex = 14;
             // 
             // txtDesviacion
@@ -240,7 +241,7 @@
             this.txtDesviacion.Location = new System.Drawing.Point(97, 78);
             this.txtDesviacion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDesviacion.Name = "txtDesviacion";
-            this.txtDesviacion.Size = new System.Drawing.Size(88, 25);
+            this.txtDesviacion.Size = new System.Drawing.Size(88, 29);
             this.txtDesviacion.TabIndex = 15;
             // 
             // btnGenerar
@@ -264,7 +265,7 @@
             this.label9.Location = new System.Drawing.Point(5, 71);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(233, 17);
+            this.label9.Size = new System.Drawing.Size(301, 23);
             this.label9.TabIndex = 17;
             this.label9.Text = "Seleccione la cantidad de Intervalos:";
             // 
@@ -330,7 +331,7 @@
             this.cbIntervalos.Location = new System.Drawing.Point(244, 66);
             this.cbIntervalos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbIntervalos.Name = "cbIntervalos";
-            this.cbIntervalos.Size = new System.Drawing.Size(146, 25);
+            this.cbIntervalos.Size = new System.Drawing.Size(146, 29);
             this.cbIntervalos.TabIndex = 1;
             this.cbIntervalos.SelectionChangeCommitted += new System.EventHandler(this.cbIntervalos_SelectionChangeCommitted);
             // 
@@ -398,7 +399,7 @@
             this.gbChi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbChi.Name = "gbChi";
             this.gbChi.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbChi.Size = new System.Drawing.Size(524, 318);
+            this.gbChi.Size = new System.Drawing.Size(698, 318);
             this.gbChi.TabIndex = 32;
             this.gbChi.TabStop = false;
             this.gbChi.Text = "Prueba Chi Cuadrado";
@@ -419,14 +420,14 @@
             this.Chi,
             this.ChiAcumulado});
             this.dgvChi.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dgvChi.Location = new System.Drawing.Point(5, 22);
+            this.dgvChi.Location = new System.Drawing.Point(5, 23);
             this.dgvChi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvChi.Name = "dgvChi";
             this.dgvChi.ReadOnly = true;
             this.dgvChi.RowHeadersVisible = false;
             this.dgvChi.RowHeadersWidth = 51;
             this.dgvChi.RowTemplate.Height = 24;
-            this.dgvChi.Size = new System.Drawing.Size(513, 289);
+            this.dgvChi.Size = new System.Drawing.Size(678, 289);
             this.dgvChi.TabIndex = 0;
             // 
             // DesdeChi
@@ -436,7 +437,7 @@
             this.DesdeChi.MinimumWidth = 6;
             this.DesdeChi.Name = "DesdeChi";
             this.DesdeChi.ReadOnly = true;
-            this.DesdeChi.Width = 71;
+            this.DesdeChi.Width = 88;
             // 
             // HastaChi
             // 
@@ -445,7 +446,7 @@
             this.HastaChi.MinimumWidth = 6;
             this.HastaChi.Name = "HastaChi";
             this.HastaChi.ReadOnly = true;
-            this.HastaChi.Width = 68;
+            this.HastaChi.Width = 84;
             // 
             // FrecObsChi
             // 
@@ -454,7 +455,7 @@
             this.FrecObsChi.MinimumWidth = 6;
             this.FrecObsChi.Name = "FrecObsChi";
             this.FrecObsChi.ReadOnly = true;
-            this.FrecObsChi.Width = 82;
+            this.FrecObsChi.Width = 103;
             // 
             // FrecEspChi
             // 
@@ -463,7 +464,7 @@
             this.FrecEspChi.MinimumWidth = 6;
             this.FrecEspChi.Name = "FrecEspChi";
             this.FrecEspChi.ReadOnly = true;
-            this.FrecEspChi.Width = 79;
+            this.FrecEspChi.Width = 99;
             // 
             // Chi
             // 
@@ -471,7 +472,7 @@
             this.Chi.MinimumWidth = 6;
             this.Chi.Name = "Chi";
             this.Chi.ReadOnly = true;
-            this.Chi.Width = 71;
+            this.Chi.Width = 87;
             // 
             // ChiAcumulado
             // 
@@ -479,7 +480,7 @@
             this.ChiAcumulado.MinimumWidth = 6;
             this.ChiAcumulado.Name = "ChiAcumulado";
             this.ChiAcumulado.ReadOnly = true;
-            this.ChiAcumulado.Width = 64;
+            this.ChiAcumulado.Width = 79;
             // 
             // gbKS
             // 
@@ -490,7 +491,7 @@
             this.gbKS.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbKS.Name = "gbKS";
             this.gbKS.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbKS.Size = new System.Drawing.Size(524, 294);
+            this.gbKS.Size = new System.Drawing.Size(698, 427);
             this.gbKS.TabIndex = 33;
             this.gbKS.TabStop = false;
             this.gbKS.Text = "Prueba K-S";
@@ -538,7 +539,7 @@
             this.dgvKS.RowHeadersVisible = false;
             this.dgvKS.RowHeadersWidth = 51;
             this.dgvKS.RowTemplate.Height = 24;
-            this.dgvKS.Size = new System.Drawing.Size(513, 265);
+            this.dgvKS.Size = new System.Drawing.Size(678, 399);
             this.dgvKS.TabIndex = 0;
             // 
             // DesdeKS
@@ -547,7 +548,7 @@
             this.DesdeKS.MinimumWidth = 6;
             this.DesdeKS.Name = "DesdeKS";
             this.DesdeKS.ReadOnly = true;
-            this.DesdeKS.Width = 71;
+            this.DesdeKS.Width = 88;
             // 
             // HastaKS
             // 
@@ -555,7 +556,7 @@
             this.HastaKS.MinimumWidth = 6;
             this.HastaKS.Name = "HastaKS";
             this.HastaKS.ReadOnly = true;
-            this.HastaKS.Width = 68;
+            this.HastaKS.Width = 84;
             // 
             // FrecObsKS
             // 
@@ -563,7 +564,7 @@
             this.FrecObsKS.MinimumWidth = 6;
             this.FrecObsKS.Name = "FrecObsKS";
             this.FrecObsKS.ReadOnly = true;
-            this.FrecObsKS.Width = 82;
+            this.FrecObsKS.Width = 103;
             // 
             // FrecEspKS
             // 
@@ -571,7 +572,7 @@
             this.FrecEspKS.MinimumWidth = 6;
             this.FrecEspKS.Name = "FrecEspKS";
             this.FrecEspKS.ReadOnly = true;
-            this.FrecEspKS.Width = 79;
+            this.FrecEspKS.Width = 99;
             // 
             // PoKS
             // 
@@ -579,7 +580,7 @@
             this.PoKS.MinimumWidth = 6;
             this.PoKS.Name = "PoKS";
             this.PoKS.ReadOnly = true;
-            this.PoKS.Width = 72;
+            this.PoKS.Width = 87;
             // 
             // PeKS
             // 
@@ -587,7 +588,7 @@
             this.PeKS.MinimumWidth = 6;
             this.PeKS.Name = "PeKS";
             this.PeKS.ReadOnly = true;
-            this.PeKS.Width = 71;
+            this.PeKS.Width = 86;
             // 
             // CalcKS
             // 
@@ -595,7 +596,7 @@
             this.CalcKS.MinimumWidth = 6;
             this.CalcKS.Name = "CalcKS";
             this.CalcKS.ReadOnly = true;
-            this.CalcKS.Width = 131;
+            this.CalcKS.Width = 165;
             // 
             // MaxKS
             // 
@@ -603,7 +604,7 @@
             this.MaxKS.MinimumWidth = 6;
             this.MaxKS.Name = "MaxKS";
             this.MaxKS.ReadOnly = true;
-            this.MaxKS.Width = 59;
+            this.MaxKS.Width = 73;
             // 
             // gbIngresoDatos
             // 
@@ -624,14 +625,26 @@
             this.gbIngresoDatos.TabStop = false;
             this.gbIngresoDatos.Text = "Datos";
             // 
+            // txtResultados
+            // 
+            this.txtResultados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtResultados.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtResultados.Location = new System.Drawing.Point(10, 650);
+            this.txtResultados.Multiline = true;
+            this.txtResultados.Name = "txtResultados";
+            this.txtResultados.ReadOnly = true;
+            this.txtResultados.Size = new System.Drawing.Size(789, 115);
+            this.txtResultados.TabIndex = 35;
+            // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.ClientSize = new System.Drawing.Size(1194, 673);
+            this.ClientSize = new System.Drawing.Size(1635, 798);
+            this.Controls.Add(this.txtResultados);
             this.Controls.Add(this.gbIngresoDatos);
             this.Controls.Add(this.gbKS);
             this.Controls.Add(this.gbNormal);
@@ -714,6 +727,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FrecEspChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Chi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ChiAcumulado;
+        private System.Windows.Forms.TextBox txtResultados;
     }
 }
 

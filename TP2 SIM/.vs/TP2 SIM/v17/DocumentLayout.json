@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\distribuciones\\exponencial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|c:\\users\\megap\\onedrive\\escritorio\\sim-tp2\\tp2 sim\\distribuciones\\exponencial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|solutionrelative:distribuciones\\exponencial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\distribuciones\\uniforme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|solutionrelative:distribuciones\\uniforme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|c:\\users\\megap\\onedrive\\escritorio\\sim-tp2\\tp2 sim\\distribuciones\\normal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|solutionrelative:distribuciones\\normal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\distribuciones\\normal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|solutionrelative:distribuciones\\normal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|c:\\users\\megap\\onedrive\\escritorio\\sim-tp2\\tp2 sim\\distribuciones\\uniforme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|solutionrelative:distribuciones\\uniforme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|solutionrelative:frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|c:\\users\\megap\\onedrive\\escritorio\\sim-tp2\\tp2 sim\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|solutionrelative:frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A92CE5-CD6D-438F-9707-004C0571D16E}|TP2 SIM.csproj|solutionrelative:frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,66 +34,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmPrincipal.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\FrmPrincipal.cs",
-              "RelativeDocumentMoniker": "FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\FrmPrincipal.cs [Design]",
-              "RelativeToolTip": "FrmPrincipal.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T23:22:30.444Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\FrmPrincipal.cs",
-              "RelativeDocumentMoniker": "FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\FrmPrincipal.cs",
-              "RelativeToolTip": "FrmPrincipal.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAswMkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T23:23:07.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FrmPrincipal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\FrmPrincipal.Designer.cs",
-              "RelativeDocumentMoniker": "FrmPrincipal.Designer.cs",
-              "ToolTip": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\FrmPrincipal.Designer.cs",
-              "RelativeToolTip": "FrmPrincipal.Designer.cs",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAmwIoAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T23:28:57.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Uniforme.cs",
               "DocumentMoniker": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\Distribuciones\\Uniforme.cs",
               "RelativeDocumentMoniker": "Distribuciones\\Uniforme.cs",
               "ToolTip": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\Distribuciones\\Uniforme.cs",
               "RelativeToolTip": "Distribuciones\\Uniforme.cs",
-              "ViewState": "AQIAAK0AAAAAAAAAAAAwwMYAAABSAAAA",
+              "ViewState": "AQIAAIABAAAAAAAAAAAuwJMBAACtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T13:31:47.767Z",
+              "WhenOpened": "2024-04-23T20:49:02.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Normal.cs",
               "DocumentMoniker": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\Distribuciones\\Normal.cs",
               "RelativeDocumentMoniker": "Distribuciones\\Normal.cs",
               "ToolTip": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\Distribuciones\\Normal.cs",
               "RelativeToolTip": "Distribuciones\\Normal.cs",
-              "ViewState": "AQIAAC8BAAAAAAAAAAAQwEABAAAQAAAA",
+              "ViewState": "AQIAAJABAAAAAAAAAAAAAJoBAACtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T13:30:16.472Z",
+              "WhenOpened": "2024-04-23T20:36:46.079Z",
               "EditorCaption": ""
             },
             {
@@ -112,9 +66,22 @@
               "RelativeDocumentMoniker": "Distribuciones\\Exponencial.cs",
               "ToolTip": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\Distribuciones\\Exponencial.cs",
               "RelativeToolTip": "Distribuciones\\Exponencial.cs",
-              "ViewState": "AQIAALIAAAAAAAAAAAAowLgAAABSAAAA",
+              "ViewState": "AQIAANABAAAAAAAAAAAuwM0BAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T13:26:35.785Z",
+              "WhenOpened": "2024-04-23T20:32:00.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "FrmPrincipal.cs",
+              "ToolTip": "C:\\Users\\megap\\OneDrive\\Escritorio\\SIM-TP2\\TP2 SIM\\FrmPrincipal.cs",
+              "RelativeToolTip": "FrmPrincipal.cs",
+              "ViewState": "AQIAAJoAAAAAAAAAAADwv7IAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T23:23:07.916Z",
               "EditorCaption": ""
             }
           ]

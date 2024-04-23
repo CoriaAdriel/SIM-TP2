@@ -27,6 +27,7 @@ namespace TP2_SIM
             gbNormal.Visible = false;
             gbChi.Visible = false;
             gbKS.Visible = false;
+            txtResultados.Visible = false;
         }
 
         /// Método que nos permite mostrar todos los datos visuales.
@@ -36,6 +37,7 @@ namespace TP2_SIM
             dgvMuestra.Show();
             gbChi.Visible = true;
             gbKS.Visible = true;
+            txtResultados.Visible = true;
         }
 
         /// Método que no permite limpíar todos los campos requeridos.
@@ -55,6 +57,7 @@ namespace TP2_SIM
             dgvMuestra.Hide();
             gbChi.Visible = false;
             gbKS.Visible = false;
+            txtResultados.Visible = false;
         }
 
         /// Método que nos permite cargar la distribución.
@@ -123,6 +126,7 @@ namespace TP2_SIM
                 uniforme.Grilla = dgvMuestra;
                 uniforme.PruebaChi = dgvChi;
                 uniforme.PruebaKS = dgvKS;
+                uniforme.Resultados = txtResultados;
 
 
                 if (uniforme.A == 0 || uniforme.B == 0 || uniforme.CantidadIntervalos == 0 || uniforme.CantidadMuestra == 0)
@@ -147,6 +151,7 @@ namespace TP2_SIM
                 exponencialNegativa.Grilla = dgvMuestra;
                 exponencialNegativa.PruebaChi = dgvChi;
                 exponencialNegativa.PruebaKS = dgvKS;
+                exponencialNegativa.Resultados = txtResultados;
 
                 if (exponencialNegativa.Lambda == 0 || exponencialNegativa.CantidadIntervalos == 0 || exponencialNegativa.CantidadMuestra == 0)
                 {
@@ -171,6 +176,7 @@ namespace TP2_SIM
                 normal.Grilla = dgvMuestra;
                 normal.PruebaChi = dgvChi;
                 normal.PruebaKS = dgvKS;
+                normal.Resultados = txtResultados;
 
                 if (normal.Desviacion == 0 || normal.Media == 0 || normal.CantidadMuestra == 0 || normal.CantidadIntervalos == 0)
                 {

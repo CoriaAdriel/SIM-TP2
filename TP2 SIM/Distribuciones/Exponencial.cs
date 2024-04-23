@@ -16,6 +16,7 @@ namespace TP2_SIM.Distribuciones
         public Chart Grafico { get; set; }
         public DataGridView PruebaChi { get; set; }
         public DataGridView PruebaKS { get; set; }
+        public TextBox Resultados { get; set; }
 
         private List<double> Datos = new List<double>();
         public DataGridView Grilla { get; set; }
@@ -47,6 +48,7 @@ namespace TP2_SIM.Distribuciones
             GenerarHistograma();
             CalcularChi();
             CalcularKS();
+            CalcularResultadoPruebas();
 
             //Agregamos la lista de variables generadas al DataGridView para poder visualizarlos
             CargarGrillaDatos(Datos);
@@ -182,7 +184,7 @@ namespace TP2_SIM.Distribuciones
                 frecuenciaEsperada = Math.Truncate(frecuenciaEsperada * 10000) / 10000;
 
                 chiCuadrado = Math.Truncate(chiCuadrado * 10000) / 10000;
-                chiCuadradoAcumulado = Math.Truncate(chiCuadrado * 10000) / 10000;
+                chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 10000) / 10000;
 
                 limitesInferiores.Add(limiteInferior);
                 limitesSuperiores.Add(limiteSuperior);
@@ -433,6 +435,79 @@ namespace TP2_SIM.Distribuciones
             double ProbabilidadEsperada = ((1 - Math.Exp((-Lambda) * limiteSuperior)) - (1 - Math.Exp((-Lambda) * limiteInferior)));
 
             return ProbabilidadEsperada;
+        }
+
+        //Calculamos los resultados de las evaluaciones y lo agregamos al textbox de resultados
+        public void CalcularResultadoPruebas()
+        {
+            Resultados.Clear();
+
+            //V=k-1-m, en el caso de exponencial m = 1
+            double gradosDeLibertad = CantidadIntervalos - 2;
+            double valorChiCalculado = Convert.ToDouble(PruebaChi.Rows[(PruebaChi.RowCount - 1)].Cells[(PruebaChi.ColumnCount - 1)].Value);
+            double valorKSCalculado = Convert.ToDouble(PruebaKS.Rows[(PruebaKS.RowCount - 1)].Cells[(PruebaKS.ColumnCount - 1)].Value);
+
+            double[,] arrayChiTabuladoDeclarado = new double[4, 2];
+            double[,] arrayChiTabulado = { { 8, 2.733 }, { 10, 3.940 }, { 14, 6.571 }, { 21, 11.591 } };
+
+            double[] arrayKSTabuladoDeclarado = new double[35];
+            double[] arrayKSTabulado = {0.9750, 0.8418, 0.7076, 0.6239, 0.5632, 0.5192, 0.4834, 0.4542, 0.4300, 0.4092, 0.3912, 0.3754,
+                0.3614, 0.3489, 0.3375, 0.3273, 0.3179, 0.3093, 0.3014, 0.2940, 0.2872, 0.2808, 0.2749, 0.2693, 0.2640, 0.2590, 0.2543,
+                0.2499, 0.2457, 0.2417, 0.2378, 0.2342, 0.2307, 0.2274, 0.2242};
+
+            Resultados.AppendText("Siendo la hipótesis que la distribución se aproxima a una Uniforme [a,b], si asumimos un nivel de significancia de alfa = 0.05: " + "\r\n");
+
+            // Buscamos los grados de libertad en la matriz y devolvemos el valor correspondiente
+            double valorChiTabulado = 0;
+
+            for (int i = 0; i < arrayChiTabulado.GetLength(0); i++)
+            {
+                for (int j = 0; j < arrayChiTabulado.GetLength(1) - 1; j++)
+                {
+                    if (arrayChiTabulado[i, j] == gradosDeLibertad)
+                    {
+                        valorChiTabulado = arrayChiTabulado[i, j + 1];
+                        break;
+                    }
+                }
+            }
+
+            //Buscamos en el array el valor correspondiente a la cantidad de muestras pedidas
+            double valorKSTabulado = 0;
+
+            if (CantidadMuestra <= arrayKSTabulado.Length)
+            {
+                valorKSTabulado = Convert.ToDouble(arrayKSTabulado[(int)CantidadMuestra - 1]); // -1 porque los índices de los arrays comienzan desde 0
+            }
+            else
+            {
+                valorKSTabulado = Math.Truncate((1.36 / (Math.Sqrt(CantidadMuestra))) * 10000) / 10000;
+            }
+
+            //Escribimos el resultado de Chi
+            if (valorChiCalculado <= valorChiTabulado)
+            {
+                Resultados.Text += "\r\nLa hipotesis no se rechaza por Chi-Cuadrado:";
+                Resultados.Text += "\r\nValor Calculado:" + valorChiCalculado + " < Valor Tabulado: " + valorChiTabulado;
+            }
+            else
+            {
+                Resultados.Text += "\r\nLa hipotesis se rechaza por Chi-Cuadrado:";
+                Resultados.Text += "\r\nValor Calculado:" + valorChiCalculado + " > Valor Tabulado: " + valorChiTabulado;
+            }
+
+            //Escribimos el resultado de KS
+            if (valorKSCalculado <= valorKSTabulado)
+            {
+                Resultados.Text += "\r\nLa hipotesis no se rechaza por K-S:";
+                Resultados.Text += "\r\nValor Calculado:" + valorKSCalculado + " < Valor Tabulado: " + valorKSTabulado;
+            }
+            else
+            {
+                Resultados.Text += "\r\nLa hipotesis se rechaza por K-S:";
+                Resultados.Text += "\r\nValor Calculado:" + valorKSCalculado + " > Valor Tabulado: " + valorKSTabulado;
+            }
+
         }
 
     }
