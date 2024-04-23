@@ -395,13 +395,15 @@ namespace TP2_SIM.Distribuciones
         {
             Resultados.Clear();
 
-            //V=k-1-m, en el caso de normal m = 2
-            double gradosDeLibertad = CantidadIntervalos - 3;
+            //V=k-1-m, en el caso de normal m = 2, usamos los intervalos que se forman en chi
+            double gradosDeLibertad = PruebaChi.Rows.Count - 3;
             double valorChiCalculado = Convert.ToDouble(PruebaChi.Rows[(PruebaChi.RowCount - 1)].Cells[(PruebaChi.ColumnCount - 1)].Value);
             double valorKSCalculado = Convert.ToDouble(PruebaKS.Rows[(PruebaKS.RowCount - 1)].Cells[(PruebaKS.ColumnCount - 1)].Value);
 
-            double[,] arrayChiTabuladoDeclarado = new double[4, 2];
-            double[,] arrayChiTabulado = { { 7, 2.167 }, { 9, 3.325 }, { 13, 5.892 }, { 20, 10.851 } };
+            double[] arrayChiTabuladoDeclarado = new double[29];
+            double[] arrayChiTabulado = { 3.841, 5.991, 7.815, 9.488, 11.070, 12.592, 14.067, 15.507, 16.919, 18.307, 19.675, 21.026,
+                22.362, 23.685, 24.996, 26.296, 27.587, 28.869, 30.144, 31.410, 32.671, 33.924, 35.172, 36.415, 37.652, 38.885, 40.113,
+                41.337, 42.557 };
 
             double[] arrayKSTabuladoDeclarado = new double[35];
             double[] arrayKSTabulado = {0.9750, 0.8418, 0.7076, 0.6239, 0.5632, 0.5192, 0.4834, 0.4542, 0.4300, 0.4092, 0.3912, 0.3754,
@@ -413,16 +415,9 @@ namespace TP2_SIM.Distribuciones
             // Buscamos los grados de libertad en la matriz y devolvemos el valor correspondiente
             double valorChiTabulado = 0;
 
-            for (int i = 0; i < arrayChiTabulado.GetLength(0); i++)
+            if (gradosDeLibertad <= arrayChiTabulado.Length)
             {
-                for (int j = 0; j < arrayChiTabulado.GetLength(1) - 1; j++)
-                {
-                    if (arrayChiTabulado[i, j] == gradosDeLibertad)
-                    {
-                        valorChiTabulado = arrayChiTabulado[i, j + 1];
-                        break;
-                    }
-                }
+                valorChiTabulado = Convert.ToDouble(arrayChiTabulado[(int)gradosDeLibertad - 1]); // -1 porque los índices de los arrays comienzan desde 0
             }
 
             //Buscamos en el array el valor correspondiente a la cantidad de muestras pedidas
