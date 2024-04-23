@@ -384,7 +384,6 @@ namespace TP2_SIM.Distribuciones
 
             //Resalta el valor de Chi final calculado;;
             PruebaChi.Rows[(PruebaChi.RowCount - 1)].Cells[(PruebaChi.ColumnCount - 1)].Style.BackColor = Color.Coral;
-
         }
 
         //Calculamos los resultados de las evaluaciones y lo agregamos al textbox de resultados
