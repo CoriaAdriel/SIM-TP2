@@ -252,6 +252,88 @@ namespace TP2_SIM.Distribuciones
             return probabilidadEsperada;
         }
 
+        /// Nos permite calcular el valor de K-S
+        public void CalcularChiCuadrado()
+        {
+            PruebaChi.Rows.Clear();
+
+            double limiteInferior = 0;
+            double limiteSuperior = 0;
+
+            double valorMaximo = Datos.Max();
+            double valorMinimo = Datos.Min();
+            double precision = 0.0001;
+
+            double amplitud = ((valorMaximo - valorMinimo) / CantidadIntervalos) + precision;
+            double marcaClase = 0;
+
+            double frecuenciaObservada = 0;
+            double frecuenciaEsperada = 0;
+            double probabilidadObservada = 0;
+            double probabilidadObservadaAcumulada = 0;
+            double probabilidadEsperada = 0;
+            double probabilidadEsperadaAcumulada = 0;
+            double calcKS = 0;
+            double maxKSAnterior = 0;
+            double maxXS = 0;
+
+            for (int i = 0; i < CantidadIntervalos; i++)
+            {
+                //Calculamos el primer Intervalo y apartir de este generamos el resto
+
+                if (i == 0)
+                {
+                    limiteInferior = valorMinimo;
+                    limiteSuperior = valorMinimo + amplitud;
+                    marcaClase = (limiteInferior + limiteSuperior) / 2;
+
+                    frecuenciaObservada = DeterminarFrecuenciaObservada(Datos, limiteInferior, limiteSuperior);
+                    frecuenciaEsperada = CalcularFrecuenciaEsperada(limiteInferior, limiteSuperior, marcaClase);
+
+                    probabilidadObservada = (frecuenciaObservada / CantidadMuestra);
+                    probabilidadObservadaAcumulada = probabilidadObservada;
+                    probabilidadEsperada = CalcularProbabilidadEsperada(limiteInferior, limiteSuperior, marcaClase);
+                    probabilidadEsperadaAcumulada = probabilidadEsperada;
+                    calcKS = Math.Abs(probabilidadObservadaAcumulada - probabilidadEsperadaAcumulada);
+                    maxXS = calcKS;
+
+                    maxKSAnterior = maxXS;
+                }
+                else
+                {
+                    limiteInferior = limiteSuperior;
+                    limiteSuperior = limiteSuperior + amplitud;
+                    marcaClase = (limiteInferior + limiteSuperior) / 2;
+
+                    frecuenciaObservada = DeterminarFrecuenciaObservada(Datos, limiteInferior, limiteSuperior);
+                    frecuenciaEsperada = CalcularFrecuenciaEsperada(limiteInferior, limiteSuperior, marcaClase);
+
+                    probabilidadObservada = frecuenciaObservada / CantidadMuestra;
+                    probabilidadObservadaAcumulada += probabilidadObservada;
+                    probabilidadEsperada = CalcularProbabilidadEsperada(limiteInferior, limiteSuperior, marcaClase);
+                    probabilidadEsperadaAcumulada += probabilidadEsperada;
+                    calcKS = Math.Abs(probabilidadObservadaAcumulada - probabilidadEsperadaAcumulada);
+                    maxXS = Math.Max(maxKSAnterior, calcKS);
+
+                    maxKSAnterior = maxXS;
+                }
+
+                //Hacemos que los valores sean de 4 decimales antes de agregarlos a la grilla
+                limiteInferior = Math.Truncate(limiteInferior * 10000) / 10000;
+                limiteSuperior = Math.Truncate(limiteSuperior * 10000) / 10000;
+                frecuenciaObservada = Math.Truncate(frecuenciaObservada * 10000) / 10000;
+                frecuenciaEsperada = Math.Truncate(frecuenciaEsperada * 10000) / 10000;
+                probabilidadObservadaAcumulada = Math.Truncate(probabilidadObservadaAcumulada * 10000) / 10000;
+                probabilidadEsperadaAcumulada = Math.Truncate(probabilidadEsperadaAcumulada * 10000) / 10000;
+                calcKS = Math.Truncate(calcKS * 10000) / 10000;
+                maxXS = Math.Truncate(maxXS * 10000) / 10000;
+
+                PruebaKS.Rows.Add(limiteInferior, limiteSuperior, frecuenciaObservada, frecuenciaEsperada, probabilidadObservadaAcumulada, probabilidadEsperadaAcumulada, calcKS, maxXS);
+            }
+            //Resalta el valor de KS final calculado
+            PruebaKS.Rows[(PruebaKS.RowCount - 1)].Cells[(PruebaKS.ColumnCount - 1)].Style.BackColor = Color.Coral;
+        }
+
     }
 
 }

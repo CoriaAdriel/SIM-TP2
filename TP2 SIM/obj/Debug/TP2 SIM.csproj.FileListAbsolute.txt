@@ -28,3 +28,13 @@ C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIMULACIÓN\S
 C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIMULACIÓN\SIM-TP2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.csproj.CoreCompileInputs.cache
 C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIMULACIÓN\SIM-TP2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.exe
 C:\Users\Family 7\Desktop\SIM\2 - TRABAJO PRÁCTICO INTEGRADOR\TP2\SIMULACIÓN\SIM-TP2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.pdb
+C:\Users\alexp\Documents\UTN\SIM\TP2\SIM-TP2\TP2 SIM\bin\Debug\TP2 SIM.exe.config
+C:\Users\alexp\Documents\UTN\SIM\TP2\SIM-TP2\TP2 SIM\bin\Debug\TP2 SIM.exe
+C:\Users\alexp\Documents\UTN\SIM\TP2\SIM-TP2\TP2 SIM\bin\Debug\TP2 SIM.pdb
+C:\Users\alexp\Documents\UTN\SIM\TP2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.csproj.AssemblyReference.cache
+C:\Users\alexp\Documents\UTN\SIM\TP2\SIM-TP2\TP2 SIM\obj\Debug\TP2_SIM.Principal.resources
+C:\Users\alexp\Documents\UTN\SIM\TP2\SIM-TP2\TP2 SIM\obj\Debug\TP2_SIM.Properties.Resources.resources
+C:\Users\alexp\Documents\UTN\SIM\TP2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.csproj.GenerateResource.cache
+C:\Users\alexp\Documents\UTN\SIM\TP2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.csproj.CoreCompileInputs.cache
+C:\Users\alexp\Documents\UTN\SIM\TP2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.exe
+C:\Users\alexp\Documents\UTN\SIM\TP2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.pdb

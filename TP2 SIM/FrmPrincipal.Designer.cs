@@ -37,7 +37,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblIngreseDatos = new System.Windows.Forms.Label();
@@ -63,11 +62,6 @@
             this.dgvMuestra = new System.Windows.Forms.DataGridView();
             this.gbChi = new System.Windows.Forms.GroupBox();
             this.dgvChi = new System.Windows.Forms.DataGridView();
-            this.DesdeChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HastaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FrecObsChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FrecEspChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChiAcumulado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbKS = new System.Windows.Forms.GroupBox();
             this.dgvKS = new System.Windows.Forms.DataGridView();
             this.DesdeKS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +73,12 @@
             this.CalcKS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaxKS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbIngresoDatos = new System.Windows.Forms.GroupBox();
+            this.DesdeChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HastaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FrecObsChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FrecEspChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Chi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChiAcumulado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbUniforme.SuspendLayout();
             this.gbExponencial.SuspendLayout();
             this.gbNormal.SuspendLayout();
@@ -116,7 +116,7 @@
             this.lblIngreseDatos.AutoSize = true;
             this.lblIngreseDatos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngreseDatos.ForeColor = System.Drawing.Color.Silver;
-            this.lblIngreseDatos.Location = new System.Drawing.Point(437, 9);
+            this.lblIngreseDatos.Location = new System.Drawing.Point(425, 9);
             this.lblIngreseDatos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIngreseDatos.Name = "lblIngreseDatos";
             this.lblIngreseDatos.Size = new System.Drawing.Size(151, 17);
@@ -276,7 +276,7 @@
             this.gbUniforme.Controls.Add(this.txtB);
             this.gbUniforme.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbUniforme.ForeColor = System.Drawing.Color.Silver;
-            this.gbUniforme.Location = new System.Drawing.Point(440, 29);
+            this.gbUniforme.Location = new System.Drawing.Point(428, 29);
             this.gbUniforme.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbUniforme.Name = "gbUniforme";
             this.gbUniforme.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -291,7 +291,7 @@
             this.gbExponencial.Controls.Add(this.txtLambda);
             this.gbExponencial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbExponencial.ForeColor = System.Drawing.Color.Silver;
-            this.gbExponencial.Location = new System.Drawing.Point(440, 29);
+            this.gbExponencial.Location = new System.Drawing.Point(428, 29);
             this.gbExponencial.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbExponencial.Name = "gbExponencial";
             this.gbExponencial.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -308,7 +308,7 @@
             this.gbNormal.Controls.Add(this.txtDesviacion);
             this.gbNormal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbNormal.ForeColor = System.Drawing.Color.Silver;
-            this.gbNormal.Location = new System.Drawing.Point(436, 29);
+            this.gbNormal.Location = new System.Drawing.Point(424, 29);
             this.gbNormal.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbNormal.Name = "gbNormal";
             this.gbNormal.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -363,7 +363,7 @@
             this.dgvMuestra.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -372,20 +372,20 @@
             this.dgvMuestra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMuestra.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMuestra.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dgvMuestra.Location = new System.Drawing.Point(667, 13);
+            this.dgvMuestra.Location = new System.Drawing.Point(645, 13);
             this.dgvMuestra.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvMuestra.Name = "dgvMuestra";
             this.dgvMuestra.ReadOnly = true;
             this.dgvMuestra.RowHeadersWidth = 51;
             this.dgvMuestra.RowTemplate.Height = 24;
-            this.dgvMuestra.Size = new System.Drawing.Size(210, 619);
+            this.dgvMuestra.Size = new System.Drawing.Size(154, 619);
             this.dgvMuestra.TabIndex = 29;
             this.dgvMuestra.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvMuestra_RowPostPaint);
             // 
@@ -394,7 +394,7 @@
             this.gbChi.Controls.Add(this.dgvChi);
             this.gbChi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbChi.ForeColor = System.Drawing.Color.Silver;
-            this.gbChi.Location = new System.Drawing.Point(908, 13);
+            this.gbChi.Location = new System.Drawing.Point(820, 13);
             this.gbChi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbChi.Name = "gbChi";
             this.gbChi.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -416,15 +416,8 @@
             this.HastaChi,
             this.FrecObsChi,
             this.FrecEspChi,
+            this.Chi,
             this.ChiAcumulado});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvChi.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvChi.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvChi.Location = new System.Drawing.Point(5, 22);
             this.dgvChi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -436,56 +429,12 @@
             this.dgvChi.Size = new System.Drawing.Size(513, 289);
             this.dgvChi.TabIndex = 0;
             // 
-            // DesdeChi
-            // 
-            this.DesdeChi.Frozen = true;
-            this.DesdeChi.HeaderText = "Desde";
-            this.DesdeChi.MinimumWidth = 6;
-            this.DesdeChi.Name = "DesdeChi";
-            this.DesdeChi.ReadOnly = true;
-            this.DesdeChi.Width = 71;
-            // 
-            // HastaChi
-            // 
-            this.HastaChi.Frozen = true;
-            this.HastaChi.HeaderText = "Hasta";
-            this.HastaChi.MinimumWidth = 6;
-            this.HastaChi.Name = "HastaChi";
-            this.HastaChi.ReadOnly = true;
-            this.HastaChi.Width = 68;
-            // 
-            // FrecObsChi
-            // 
-            this.FrecObsChi.Frozen = true;
-            this.FrecObsChi.HeaderText = "FrecObs";
-            this.FrecObsChi.MinimumWidth = 6;
-            this.FrecObsChi.Name = "FrecObsChi";
-            this.FrecObsChi.ReadOnly = true;
-            this.FrecObsChi.Width = 82;
-            // 
-            // FrecEspChi
-            // 
-            this.FrecEspChi.Frozen = true;
-            this.FrecEspChi.HeaderText = "FrecEsp";
-            this.FrecEspChi.MinimumWidth = 6;
-            this.FrecEspChi.Name = "FrecEspChi";
-            this.FrecEspChi.ReadOnly = true;
-            this.FrecEspChi.Width = 79;
-            // 
-            // ChiAcumulado
-            // 
-            this.ChiAcumulado.HeaderText = "C(ac)";
-            this.ChiAcumulado.MinimumWidth = 6;
-            this.ChiAcumulado.Name = "ChiAcumulado";
-            this.ChiAcumulado.ReadOnly = true;
-            this.ChiAcumulado.Width = 64;
-            // 
             // gbKS
             // 
             this.gbKS.Controls.Add(this.dgvKS);
             this.gbKS.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbKS.ForeColor = System.Drawing.Color.Silver;
-            this.gbKS.Location = new System.Drawing.Point(908, 337);
+            this.gbKS.Location = new System.Drawing.Point(820, 338);
             this.gbKS.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbKS.Name = "gbKS";
             this.gbKS.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -499,18 +448,18 @@
             this.dgvKS.AllowUserToAddRows = false;
             this.dgvKS.AllowUserToDeleteRows = false;
             this.dgvKS.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.dgvKS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvKS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvKS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvKS.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvKS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DesdeKS,
@@ -521,14 +470,14 @@
             this.PeKS,
             this.CalcKS,
             this.MaxKS});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvKS.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvKS.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvKS.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvKS.Location = new System.Drawing.Point(5, 22);
             this.dgvKS.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -623,6 +572,58 @@
             this.gbIngresoDatos.TabStop = false;
             this.gbIngresoDatos.Text = "Datos";
             // 
+            // DesdeChi
+            // 
+            this.DesdeChi.Frozen = true;
+            this.DesdeChi.HeaderText = "Desde";
+            this.DesdeChi.MinimumWidth = 6;
+            this.DesdeChi.Name = "DesdeChi";
+            this.DesdeChi.ReadOnly = true;
+            this.DesdeChi.Width = 71;
+            // 
+            // HastaChi
+            // 
+            this.HastaChi.Frozen = true;
+            this.HastaChi.HeaderText = "Hasta";
+            this.HastaChi.MinimumWidth = 6;
+            this.HastaChi.Name = "HastaChi";
+            this.HastaChi.ReadOnly = true;
+            this.HastaChi.Width = 68;
+            // 
+            // FrecObsChi
+            // 
+            this.FrecObsChi.Frozen = true;
+            this.FrecObsChi.HeaderText = "FrecObs";
+            this.FrecObsChi.MinimumWidth = 6;
+            this.FrecObsChi.Name = "FrecObsChi";
+            this.FrecObsChi.ReadOnly = true;
+            this.FrecObsChi.Width = 82;
+            // 
+            // FrecEspChi
+            // 
+            this.FrecEspChi.Frozen = true;
+            this.FrecEspChi.HeaderText = "FrecEsp";
+            this.FrecEspChi.MinimumWidth = 6;
+            this.FrecEspChi.Name = "FrecEspChi";
+            this.FrecEspChi.ReadOnly = true;
+            this.FrecEspChi.Width = 79;
+            // 
+            // Chi
+            // 
+            this.Chi.HeaderText = "c        ";
+            this.Chi.MinimumWidth = 6;
+            this.Chi.Name = "Chi";
+            this.Chi.ReadOnly = true;
+            this.Chi.Width = 71;
+            // 
+            // ChiAcumulado
+            // 
+            this.ChiAcumulado.HeaderText = "C(ac)";
+            this.ChiAcumulado.MinimumWidth = 6;
+            this.ChiAcumulado.Name = "ChiAcumulado";
+            this.ChiAcumulado.ReadOnly = true;
+            this.ChiAcumulado.Width = 64;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -630,7 +631,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.ClientSize = new System.Drawing.Size(1194, 656);
+            this.ClientSize = new System.Drawing.Size(1194, 673);
             this.Controls.Add(this.gbIngresoDatos);
             this.Controls.Add(this.gbKS);
             this.Controls.Add(this.gbNormal);
@@ -698,11 +699,6 @@
         private System.Windows.Forms.GroupBox gbKS;
         private System.Windows.Forms.DataGridView dgvChi;
         private System.Windows.Forms.DataGridView dgvKS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DesdeChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HastaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FrecObsChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FrecEspChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ChiAcumulado;
         private System.Windows.Forms.DataGridViewTextBoxColumn DesdeKS;
         private System.Windows.Forms.DataGridViewTextBoxColumn HastaKS;
         private System.Windows.Forms.DataGridViewTextBoxColumn FrecObsKS;
@@ -712,6 +708,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CalcKS;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaxKS;
         private System.Windows.Forms.GroupBox gbIngresoDatos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DesdeChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HastaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FrecObsChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FrecEspChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Chi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ChiAcumulado;
     }
 }
 

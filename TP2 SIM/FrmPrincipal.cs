@@ -214,6 +214,7 @@ namespace TP2_SIM
             var headerBounds = new Rectangle(e.RowBounds.Left, e.RowBounds.Top, grilla.RowHeadersWidth, e.RowBounds.Height);
             e.Graphics.DrawString(rowIndex, this.Font, SystemBrushes.ControlText, headerBounds, centerformat);
         }
+
     }
 
 }
