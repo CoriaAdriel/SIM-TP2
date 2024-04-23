@@ -223,7 +223,7 @@ namespace TP2_SIM.Distribuciones
                          limiteInferior = 0;
                     }
                     
-                    if (frecuenciaObservadaAcumulada < 5 && i == CantidadIntervalos - 1)
+                    if (frecuenciaEsperadaAcumulada < 5 && i == CantidadIntervalos - 1)
                     {
                          double ultimaFrecuenciaObservada = Convert.ToDouble(PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[2].Value);
                          double ultimaFrecuenciaEsperada = Convert.ToDouble(PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[3].Value);

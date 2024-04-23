@@ -49,3 +49,13 @@ B:\UTN\Cuarto año\Simulacion\Tp2V2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.csproj.Gen
 B:\UTN\Cuarto año\Simulacion\Tp2V2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.csproj.CoreCompileInputs.cache
 B:\UTN\Cuarto año\Simulacion\Tp2V2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.exe
 B:\UTN\Cuarto año\Simulacion\Tp2V2\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.pdb
+C:\Users\alexp\Documents\UTN\SIM\TP2\TP 2 Arreglos\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.csproj.AssemblyReference.cache
+C:\Users\alexp\Documents\UTN\SIM\TP2\TP 2 Arreglos\SIM-TP2\TP2 SIM\obj\Debug\TP2_SIM.Principal.resources
+C:\Users\alexp\Documents\UTN\SIM\TP2\TP 2 Arreglos\SIM-TP2\TP2 SIM\obj\Debug\TP2_SIM.Properties.Resources.resources
+C:\Users\alexp\Documents\UTN\SIM\TP2\TP 2 Arreglos\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.csproj.GenerateResource.cache
+C:\Users\alexp\Documents\UTN\SIM\TP2\TP 2 Arreglos\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.csproj.CoreCompileInputs.cache
+C:\Users\alexp\Documents\UTN\SIM\TP2\TP 2 Arreglos\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.exe
+C:\Users\alexp\Documents\UTN\SIM\TP2\TP 2 Arreglos\SIM-TP2\TP2 SIM\obj\Debug\TP2 SIM.pdb
+C:\Users\alexp\Documents\UTN\SIM\TP2\TP 2 Arreglos\SIM-TP2\TP2 SIM\bin\Debug\TP2 SIM.exe.config
+C:\Users\alexp\Documents\UTN\SIM\TP2\TP 2 Arreglos\SIM-TP2\TP2 SIM\bin\Debug\TP2 SIM.exe
+C:\Users\alexp\Documents\UTN\SIM\TP2\TP 2 Arreglos\SIM-TP2\TP2 SIM\bin\Debug\TP2 SIM.pdb

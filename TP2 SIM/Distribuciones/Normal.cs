@@ -279,11 +279,11 @@ namespace TP2_SIM.Distribuciones
             double frecuenciaEsperadaAcumulada = 0;
             double frecuenciaObservadaAcumulada = 0;
 
-
             List<double> limitesInferiores = new List<double>();
             List<double> limitesSuperiores = new List<double>();
             List<double> frecuenciasObservadas = new List<double>();
             List<double> frecuenciasEsperadas = new List<double>();
+   
 
 
 
@@ -299,8 +299,7 @@ namespace TP2_SIM.Distribuciones
 
                     frecuenciaObservada = DeterminarFrecuenciaObservada(Datos, limiteInferior, limiteSuperior);
                     frecuenciaEsperada = CalcularFrecuenciaEsperada(limiteInferior, limiteSuperior, marcaClase);
-                    chiCuadrado = (Math.Pow(frecuenciaObservada - frecuenciaEsperada, 2)) / frecuenciaEsperada;
-                    chiCuadradoAcumulado += chiCuadrado;
+
                 }
                 else
                 {
@@ -309,80 +308,78 @@ namespace TP2_SIM.Distribuciones
                     marcaClase = (limiteInferior + limiteSuperior) / 2;
                     frecuenciaObservada = DeterminarFrecuenciaObservada(Datos, limiteInferior, limiteSuperior);
                     frecuenciaEsperada = CalcularFrecuenciaEsperada(limiteInferior, limiteSuperior, marcaClase);
-                    chiCuadrado = (Math.Pow(frecuenciaObservada - frecuenciaEsperada, 2)) / frecuenciaEsperada;
-                    chiCuadradoAcumulado += chiCuadrado;
+
                 }
 
-                //Hacemos que los valores sean de 4 decimales antes de agregarlos a la grilla
+                
                 limiteInferior = Math.Truncate(limiteInferior * 10000) / 10000;
                 limiteSuperior = Math.Truncate(limiteSuperior * 10000) / 10000;
                 frecuenciaObservada = Math.Truncate(frecuenciaObservada * 10000) / 10000;
                 frecuenciaEsperada = Math.Truncate(frecuenciaEsperada * 10000) / 10000;
-
-                chiCuadrado = Math.Truncate(chiCuadrado * 10000) / 10000;
-                chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 10000) / 10000;
+  
 
                 limitesInferiores.Add(limiteInferior);
                 limitesSuperiores.Add(limiteSuperior);
                 frecuenciasObservadas.Add(frecuenciaObservada);
                 frecuenciasEsperadas.Add(frecuenciaEsperada);
 
-                if (CalcularFrecuenciaEsperada(limiteInferior, limiteSuperior, marcaClase) >= 5)
+
+                
+
+            }
+
+            for (int i = 0; i < CantidadIntervalos; i++)
+            {
+
+                if (frecuenciaEsperadaAcumulada == 0)
                 {
-                    PruebaChi.Rows.Add(limiteInferior, limiteSuperior, frecuenciaObservada, frecuenciaEsperada, chiCuadrado, chiCuadradoAcumulado);
-
+                    limiteInferior = limitesInferiores[i];
                 }
-                else
+
+                frecuenciaEsperadaAcumulada += frecuenciasEsperadas[i];
+                frecuenciaObservadaAcumulada += frecuenciasObservadas[i];
+
+                if (frecuenciaEsperadaAcumulada >= 5)
                 {
-                    if (frecuenciaEsperadaAcumulada == 0)
-                    {
-                        limiteInferior = limitesInferiores[i];
-                    }
-
-                    frecuenciaEsperadaAcumulada += frecuenciasEsperadas[i];
-                    frecuenciaObservadaAcumulada += frecuenciasObservadas[i];
-
-                    if (frecuenciaEsperadaAcumulada >= 5)
-                    {
-                        limiteSuperior = limitesSuperiores[i];
-                        chiCuadrado = (Math.Pow(frecuenciaObservadaAcumulada - frecuenciaEsperadaAcumulada, 2)) / frecuenciaEsperadaAcumulada;
-                        chiCuadradoAcumulado += chiCuadrado;
+                    limiteSuperior = limitesSuperiores[i];
+                    chiCuadrado = (Math.Pow(frecuenciaObservadaAcumulada - frecuenciaEsperadaAcumulada, 2)) / frecuenciaEsperadaAcumulada;
+                    chiCuadradoAcumulado += chiCuadrado;
 
 
-                        chiCuadrado = Math.Truncate(chiCuadrado * 10000) / 10000;
-                        chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 10000) / 10000;
+                    chiCuadrado = Math.Truncate(chiCuadrado * 10000) / 10000;
+                    chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 10000) / 10000;
 
-                        PruebaChi.Rows.Add(limiteInferior, limiteSuperior, frecuenciaObservadaAcumulada, frecuenciaEsperadaAcumulada, chiCuadrado, chiCuadradoAcumulado);
-                        frecuenciaEsperadaAcumulada = 0;
-                        frecuenciaObservadaAcumulada = 0;
-                        limiteInferior = 0;
-                    }
-
-                    if (frecuenciaObservadaAcumulada < 5 && i == CantidadIntervalos - 1)
-                    {
-                        double ultimaFrecuenciaObservada = Convert.ToDouble(PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[2].Value);
-                        double ultimaFrecuenciaEsperada = Convert.ToDouble(PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[3].Value);
-
-                        double nuevaFrecuenciaObservada = ultimaFrecuenciaObservada + frecuenciaObservadaAcumulada;
-                        double nuevaFrecuenciaEsperada = ultimaFrecuenciaEsperada + frecuenciaEsperadaAcumulada;
-
-                        chiCuadrado = (Math.Pow(nuevaFrecuenciaObservada - nuevaFrecuenciaEsperada, 2)) / nuevaFrecuenciaEsperada;
-
-                        double penultimoChiAcumulado = Convert.ToDouble(PruebaChi.Rows[PruebaChi.Rows.Count - 2].Cells[5].Value);
-
-                        chiCuadradoAcumulado = penultimoChiAcumulado + chiCuadrado;
-
-                        chiCuadrado = Math.Truncate(chiCuadrado * 10000) / 10000;
-                        chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 10000) / 10000;
-
-                        PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[1].Value = limitesSuperiores[i];
-                        PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[2].Value = nuevaFrecuenciaObservada;
-                        PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[3].Value = nuevaFrecuenciaEsperada;
-                        PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[4].Value = chiCuadrado;
-                        PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[5].Value = chiCuadradoAcumulado;
-                    }
-
+                    PruebaChi.Rows.Add(limiteInferior, limiteSuperior, frecuenciaObservadaAcumulada, frecuenciaEsperadaAcumulada, chiCuadrado, chiCuadradoAcumulado);
+                    frecuenciaEsperadaAcumulada = 0;
+                    frecuenciaObservadaAcumulada = 0;
+                    limiteInferior = 0;
+                    limiteSuperior = 0; 
                 }
+
+                if (frecuenciaEsperadaAcumulada < 5 && i == CantidadIntervalos - 1)
+                {
+                    double ultimaFrecuenciaObservada = Convert.ToDouble(PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[2].Value);
+                    double ultimaFrecuenciaEsperada = Convert.ToDouble(PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[3].Value);
+
+                    double nuevaFrecuenciaObservada = ultimaFrecuenciaObservada + frecuenciaObservadaAcumulada;
+                    double nuevaFrecuenciaEsperada = ultimaFrecuenciaEsperada + frecuenciaEsperadaAcumulada;
+
+                    chiCuadrado = (Math.Pow(nuevaFrecuenciaObservada - nuevaFrecuenciaEsperada, 2)) / nuevaFrecuenciaEsperada;
+
+                    double penultimoChiAcumulado = Convert.ToDouble(PruebaChi.Rows[PruebaChi.Rows.Count - 2].Cells[5].Value);
+
+                    chiCuadradoAcumulado = penultimoChiAcumulado + chiCuadrado;
+
+                    chiCuadrado = Math.Truncate(chiCuadrado * 10000) / 10000;
+                    chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 10000) / 10000;
+
+                    PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[1].Value = limitesSuperiores[i];
+                    PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[2].Value = nuevaFrecuenciaObservada;
+                    PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[3].Value = nuevaFrecuenciaEsperada;
+                    PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[4].Value = chiCuadrado;
+                    PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[5].Value = chiCuadradoAcumulado;
+                }
+
             }
 
             //Resalta el valor de Chi final calculado;;
