@@ -408,7 +408,7 @@ namespace TP2_SIM.Distribuciones
                 0.3614, 0.3489, 0.3375, 0.3273, 0.3179, 0.3093, 0.3014, 0.2940, 0.2872, 0.2808, 0.2749, 0.2693, 0.2640, 0.2590, 0.2543,
                 0.2499, 0.2457, 0.2417, 0.2378, 0.2342, 0.2307, 0.2274, 0.2242};
 
-            Resultados.AppendText("Siendo la hipótesis que la distribución se aproxima a una Uniforme [a,b], si asumimos un nivel de significancia de alfa = 0.05: " + "\r\n");
+            Resultados.AppendText("Siendo la hipótesis que la distribución se aproxima a una Normal, si asumimos un nivel de significancia de alfa = 0.05: " + "\r\n");
 
             // Buscamos los grados de libertad en la matriz y devolvemos el valor correspondiente
             double valorChiTabulado = 0;
