@@ -196,6 +196,10 @@ namespace TP2_SIM.Distribuciones
                 
             }
 
+            chiCuadradoAcumulado = 0;
+            frecuenciaEsperadaAcumulada = 0;
+            frecuenciaObservadaAcumulada = 0;
+
             for (int i = 0; i < CantidadIntervalos; i++)
             {
 
@@ -253,72 +257,6 @@ namespace TP2_SIM.Distribuciones
             //Resalta el valor de Chi final calculado;;
             PruebaChi.Rows[(PruebaChi.RowCount - 1)].Cells[(PruebaChi.ColumnCount - 1)].Style.BackColor = Color.Coral;
         }
-
-
-        /*if (CalcularFrecuenciaEsperada(limiteInferior, limiteSuperior) < 5)
-        {
-            chiCuadradoAcumulado = 0;
-            frecuenciaEsperadaAcumulada = 0;
-            frecuenciaObservadaAcumulada = 0;
-
-
-            for (int i = 0; i < CantidadIntervalos; i++)
-            {
-                if (frecuenciaEsperadaAcumulada == 0)
-                {
-                    limiteInferior = limitesInferiores[i];
-                }
-
-                frecuenciaEsperadaAcumulada += frecuenciasEsperadas[i];
-                frecuenciaObservadaAcumulada += frecuenciasObservadas[i];
-
-                if (frecuenciaEsperadaAcumulada >= 5)
-                {
-                    limiteSuperior = limitesSuperiores[i];
-                    chiCuadrado = (Math.Pow(frecuenciaObservadaAcumulada - frecuenciaEsperadaAcumulada, 2)) / frecuenciaEsperadaAcumulada;
-                    chiCuadradoAcumulado += chiCuadrado;
-
-
-                    chiCuadrado = Math.Truncate(chiCuadrado * 10000) / 10000;
-                    chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 1000) / 1000;
-
-                    PruebaChi.Rows.Add(limiteInferior, limiteSuperior, frecuenciaObservadaAcumulada, frecuenciaEsperadaAcumulada, chiCuadrado, chiCuadradoAcumulado);
-                    frecuenciaEsperadaAcumulada = 0;
-                    frecuenciaObservadaAcumulada = 0;
-                    limiteInferior = 0;
-                }
-
-                if (frecuenciaObservadaAcumulada < 5 && i == CantidadIntervalos - 1)
-                {
-                    double ultimaFrecuenciaObservada = Convert.ToDouble(PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[2].Value);
-                    double ultimaFrecuenciaEsperada = Convert.ToDouble(PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[3].Value);
-
-                    double nuevaFrecuenciaObservada = ultimaFrecuenciaObservada + frecuenciaObservadaAcumulada;
-                    double nuevaFrecuenciaEsperada = ultimaFrecuenciaEsperada + frecuenciaEsperadaAcumulada;
-
-                    chiCuadrado = (Math.Pow(nuevaFrecuenciaObservada - nuevaFrecuenciaEsperada, 2)) / nuevaFrecuenciaEsperada;
-
-                    double penultimoChiAcumulado = Convert.ToDouble(PruebaChi.Rows[PruebaChi.Rows.Count - 2].Cells[5].Value);
-
-                    chiCuadradoAcumulado = penultimoChiAcumulado + chiCuadrado;
-
-                    chiCuadrado = Math.Truncate(chiCuadrado * 10000) / 10000;
-                    chiCuadradoAcumulado = Math.Truncate(chiCuadradoAcumulado * 1000) / 1000;
-
-                    PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[1].Value = limitesSuperiores[i];
-                    PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[2].Value = nuevaFrecuenciaObservada;
-                    PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[3].Value = nuevaFrecuenciaEsperada;
-                    PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[4].Value = chiCuadrado;
-                    PruebaChi.Rows[PruebaChi.Rows.Count - 1].Cells[5].Value = chiCuadradoAcumulado;
-                }
-            }
-        }
-
-        //Resalta el valor de Chi final calculado;;
-        PruebaChi.Rows[(PruebaChi.RowCount - 1)].Cells[(PruebaChi.ColumnCount - 1)].Style.BackColor = Color.Coral;
-
-    }*/
-
 
         /// Nos permite calcular el valor de K-S.
         public void CalcularKS()

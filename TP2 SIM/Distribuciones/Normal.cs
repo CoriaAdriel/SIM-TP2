@@ -323,9 +323,6 @@ namespace TP2_SIM.Distribuciones
                 frecuenciasObservadas.Add(frecuenciaObservada);
                 frecuenciasEsperadas.Add(frecuenciaEsperada);
 
-
-                
-
             }
 
             for (int i = 0; i < CantidadIntervalos; i++)
