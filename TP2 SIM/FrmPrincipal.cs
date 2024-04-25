@@ -133,6 +133,10 @@ namespace TP2_SIM
                 {
                     MessageBox.Show("Error: Complete los datos requeridos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (uniforme.CantidadMuestra < 0)
+                {
+                    MessageBox.Show("Error: No se puede tener muestras negativas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     uniforme.GenerarDistribucion();
@@ -156,6 +160,14 @@ namespace TP2_SIM
                 if (exponencialNegativa.Lambda == 0 || exponencialNegativa.CantidadIntervalos == 0 || exponencialNegativa.CantidadMuestra == 0)
                 {
                     MessageBox.Show("Error: Complete los datos requeridos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (exponencialNegativa.CantidadMuestra < 0)
+                {
+                    MessageBox.Show("Error: No se puede tener muestras negativas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (exponencialNegativa.Lambda < 0)
+                {
+                    MessageBox.Show("Error: No se puede tener un lambda negativo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -182,6 +194,10 @@ namespace TP2_SIM
                 {
                     MessageBox.Show("Error: Complete los datos requeridos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (normal.CantidadMuestra < 0)
+                {
+                    MessageBox.Show("Error: No se puede tener muestras negativas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     normal.GenerarDistribucion();
@@ -206,6 +222,112 @@ namespace TP2_SIM
             e.Graphics.DrawString(rowIndex, this.Font, SystemBrushes.ControlText, headerBounds, centerformat);
         }
 
+
+        //
+        //Controladores que evitan ingresar letras en los campos
+        //
+
+        private void txtN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que solo se ingresan numeros
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMedia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que solo se ingresan numeros
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '-'))
+            {
+                e.Handled = true;
+            }
+
+            // Permite el ingreso de decimales
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+            // Permite el ingreso de negativos
+            if ((e.KeyChar == '-') && ((sender as TextBox).Text.IndexOf('-') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDesviacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que solo se ingresan numeros
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Permite el ingreso de decimales
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtLambda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que solo se ingresan numeros
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Permite el ingreso de decimales
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que solo se ingresan numeros
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '-'))
+            {
+                e.Handled = true;
+            }
+
+            // Permite el ingreso de decimales
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+            // Permite el ingreso de negativos
+            if ((e.KeyChar == '-') && ((sender as TextBox).Text.IndexOf('-') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que solo se ingresan numeros
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '-'))
+            {
+                e.Handled = true;
+            }
+
+            // Permite el ingreso de decimales
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+            // Permite el ingreso de negativos
+            if ((e.KeyChar == '-') && ((sender as TextBox).Text.IndexOf('-') > -1))
+            {
+                e.Handled = true; 
+            }
+        }
     }
 
 }
