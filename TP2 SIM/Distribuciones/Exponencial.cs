@@ -79,7 +79,7 @@ namespace TP2_SIM.Distribuciones
             double valorMinimo = Datos.Min();
             double precision = 0.0001;
 
-            double amplitud = ((valorMaximo - valorMinimo) / CantidadIntervalos) + precision;
+            double amplitud = ((valorMaximo - valorMinimo) / CantidadIntervalos);
 
             int frecuenciaObservada = 0;
             double frecuenciaEsperada = 0;
@@ -92,7 +92,7 @@ namespace TP2_SIM.Distribuciones
                 if (i == 0)
                 {
                     limiteInferior = valorMinimo;
-                    limiteSuperior = valorMinimo + amplitud;
+                    limiteSuperior = valorMinimo + amplitud - precision;
 
                     frecuenciaObservada = DeterminarFrecuenciaObservada(Datos, limiteInferior, limiteSuperior);
                     frecuenciaObservadaAcumulada = frecuenciaObservada;
@@ -101,8 +101,8 @@ namespace TP2_SIM.Distribuciones
                 }
                 else
                 {
-                    limiteInferior = limiteSuperior;
-                    limiteSuperior = limiteSuperior + amplitud;
+                    limiteInferior = limiteSuperior + precision;
+                    limiteSuperior = limiteSuperior + amplitud - precision;
 
                     frecuenciaObservada = DeterminarFrecuenciaObservada(Datos, limiteInferior, limiteSuperior);
                     frecuenciaObservadaAcumulada += frecuenciaObservada;
@@ -134,7 +134,7 @@ namespace TP2_SIM.Distribuciones
             double valorMinimo = Datos.Min();
             double precision = 0.0001;
 
-            double amplitud = ((valorMaximo - valorMinimo) / CantidadIntervalos) + precision;
+            double amplitud = ((valorMaximo - valorMinimo) / CantidadIntervalos);
 
             double frecuenciaObservada = 0;
             double frecuenciaEsperada = 0;
@@ -160,7 +160,7 @@ namespace TP2_SIM.Distribuciones
                 if (i == 0)
                 {
                     limiteInferior = valorMinimo;
-                    limiteSuperior = valorMinimo + amplitud;
+                    limiteSuperior = valorMinimo + amplitud - precision;
 
                     frecuenciaObservada = DeterminarFrecuenciaObservada(Datos, limiteInferior, limiteSuperior);
                     frecuenciaEsperada = CalcularFrecuenciaEsperada(limiteInferior, limiteSuperior);
@@ -169,8 +169,8 @@ namespace TP2_SIM.Distribuciones
                 }
                 else
                 {
-                    limiteInferior = limiteSuperior;
-                    limiteSuperior = limiteSuperior + amplitud;
+                    limiteInferior = limiteSuperior + precision;
+                    limiteSuperior = limiteSuperior + amplitud - precision;
                     frecuenciaObservada = DeterminarFrecuenciaObservada(Datos, limiteInferior, limiteSuperior);
                     frecuenciaEsperada = CalcularFrecuenciaEsperada(limiteInferior, limiteSuperior);
                     chiCuadrado = (Math.Pow(frecuenciaObservada - frecuenciaEsperada, 2)) / frecuenciaEsperada;
@@ -270,7 +270,7 @@ namespace TP2_SIM.Distribuciones
             double valorMinimo = Datos.Min();
             double precision = 0.0001;
 
-            double amplitud = ((valorMaximo - valorMinimo) / CantidadIntervalos) + precision;
+            double amplitud = ((valorMaximo - valorMinimo) / CantidadIntervalos);
 
             double frecuenciaObservada = 0;
             double frecuenciaEsperada = 0;
@@ -289,7 +289,7 @@ namespace TP2_SIM.Distribuciones
                 if (i == 0)
                 {
                     limiteInferior = valorMinimo;
-                    limiteSuperior = valorMinimo + amplitud;
+                    limiteSuperior = valorMinimo + amplitud - precision;
 
                     frecuenciaObservada = DeterminarFrecuenciaObservada(Datos, limiteInferior, limiteSuperior);
                     frecuenciaEsperada = CalcularFrecuenciaEsperada(limiteInferior, limiteSuperior);
@@ -305,8 +305,8 @@ namespace TP2_SIM.Distribuciones
                 }
                 else
                 {
-                    limiteInferior = limiteSuperior;
-                    limiteSuperior = limiteSuperior + amplitud;
+                    limiteInferior = limiteSuperior + precision;
+                    limiteSuperior = limiteSuperior + amplitud - precision;
 
                     frecuenciaObservada = DeterminarFrecuenciaObservada(Datos, limiteInferior, limiteSuperior);
                     frecuenciaEsperada = CalcularFrecuenciaEsperada(limiteInferior, limiteSuperior);

@@ -38,6 +38,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblIngreseDatos = new System.Windows.Forms.Label();
@@ -63,6 +64,12 @@
             this.dgvMuestra = new System.Windows.Forms.DataGridView();
             this.gbChi = new System.Windows.Forms.GroupBox();
             this.dgvChi = new System.Windows.Forms.DataGridView();
+            this.DesdeChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HastaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FrecObsChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FrecEspChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Chi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChiAcumulado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbKS = new System.Windows.Forms.GroupBox();
             this.dgvKS = new System.Windows.Forms.DataGridView();
             this.DesdeKS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,12 +82,6 @@
             this.MaxKS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbIngresoDatos = new System.Windows.Forms.GroupBox();
             this.txtResultados = new System.Windows.Forms.TextBox();
-            this.DesdeChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HastaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FrecObsChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FrecEspChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Chi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChiAcumulado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbUniforme.SuspendLayout();
             this.gbExponencial.SuspendLayout();
             this.gbNormal.SuspendLayout();
@@ -415,12 +416,14 @@
             // 
             this.dgvChi.AllowUserToAddRows = false;
             this.dgvChi.AllowUserToDeleteRows = false;
+            this.dgvChi.AllowUserToResizeColumns = false;
             this.dgvChi.AllowUserToResizeRows = false;
-            this.dgvChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvChi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvChi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -453,6 +456,48 @@
             this.dgvChi.Size = new System.Drawing.Size(678, 289);
             this.dgvChi.TabIndex = 0;
             // 
+            // DesdeChi
+            // 
+            this.DesdeChi.HeaderText = "Desde";
+            this.DesdeChi.MinimumWidth = 6;
+            this.DesdeChi.Name = "DesdeChi";
+            this.DesdeChi.ReadOnly = true;
+            // 
+            // HastaChi
+            // 
+            this.HastaChi.HeaderText = "Hasta";
+            this.HastaChi.MinimumWidth = 6;
+            this.HastaChi.Name = "HastaChi";
+            this.HastaChi.ReadOnly = true;
+            // 
+            // FrecObsChi
+            // 
+            this.FrecObsChi.HeaderText = "FrecObs";
+            this.FrecObsChi.MinimumWidth = 6;
+            this.FrecObsChi.Name = "FrecObsChi";
+            this.FrecObsChi.ReadOnly = true;
+            // 
+            // FrecEspChi
+            // 
+            this.FrecEspChi.HeaderText = "FrecEsp";
+            this.FrecEspChi.MinimumWidth = 6;
+            this.FrecEspChi.Name = "FrecEspChi";
+            this.FrecEspChi.ReadOnly = true;
+            // 
+            // Chi
+            // 
+            this.Chi.HeaderText = "c        ";
+            this.Chi.MinimumWidth = 6;
+            this.Chi.Name = "Chi";
+            this.Chi.ReadOnly = true;
+            // 
+            // ChiAcumulado
+            // 
+            this.ChiAcumulado.HeaderText = "C(ac)";
+            this.ChiAcumulado.MinimumWidth = 6;
+            this.ChiAcumulado.Name = "ChiAcumulado";
+            this.ChiAcumulado.ReadOnly = true;
+            // 
             // gbKS
             // 
             this.gbKS.Controls.Add(this.dgvKS);
@@ -473,10 +518,11 @@
             this.dgvKS.AllowUserToDeleteRows = false;
             this.dgvKS.AllowUserToResizeRows = false;
             this.dgvKS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvKS.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvKS.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -517,7 +563,7 @@
             this.DesdeKS.MinimumWidth = 6;
             this.DesdeKS.Name = "DesdeKS";
             this.DesdeKS.ReadOnly = true;
-            this.DesdeKS.Width = 86;
+            this.DesdeKS.Width = 88;
             // 
             // HastaKS
             // 
@@ -525,7 +571,7 @@
             this.HastaKS.MinimumWidth = 6;
             this.HastaKS.Name = "HastaKS";
             this.HastaKS.ReadOnly = true;
-            this.HastaKS.Width = 82;
+            this.HastaKS.Width = 84;
             // 
             // FrecObsKS
             // 
@@ -533,6 +579,7 @@
             this.FrecObsKS.MinimumWidth = 6;
             this.FrecObsKS.Name = "FrecObsKS";
             this.FrecObsKS.ReadOnly = true;
+            this.FrecObsKS.Width = 103;
             // 
             // FrecEspKS
             // 
@@ -540,7 +587,7 @@
             this.FrecEspKS.MinimumWidth = 6;
             this.FrecEspKS.Name = "FrecEspKS";
             this.FrecEspKS.ReadOnly = true;
-            this.FrecEspKS.Width = 96;
+            this.FrecEspKS.Width = 99;
             // 
             // PoKS
             // 
@@ -548,7 +595,7 @@
             this.PoKS.MinimumWidth = 6;
             this.PoKS.Name = "PoKS";
             this.PoKS.ReadOnly = true;
-            this.PoKS.Width = 85;
+            this.PoKS.Width = 87;
             // 
             // PeKS
             // 
@@ -556,7 +603,7 @@
             this.PeKS.MinimumWidth = 6;
             this.PeKS.Name = "PeKS";
             this.PeKS.ReadOnly = true;
-            this.PeKS.Width = 84;
+            this.PeKS.Width = 86;
             // 
             // CalcKS
             // 
@@ -564,7 +611,7 @@
             this.CalcKS.MinimumWidth = 6;
             this.CalcKS.Name = "CalcKS";
             this.CalcKS.ReadOnly = true;
-            this.CalcKS.Width = 155;
+            this.CalcKS.Width = 165;
             // 
             // MaxKS
             // 
@@ -572,7 +619,7 @@
             this.MaxKS.MinimumWidth = 6;
             this.MaxKS.Name = "MaxKS";
             this.MaxKS.ReadOnly = true;
-            this.MaxKS.Width = 71;
+            this.MaxKS.Width = 73;
             // 
             // gbIngresoDatos
             // 
@@ -604,53 +651,6 @@
             this.txtResultados.Size = new System.Drawing.Size(789, 115);
             this.txtResultados.TabIndex = 35;
             // 
-            // DesdeChi
-            // 
-            this.DesdeChi.HeaderText = "Desde";
-            this.DesdeChi.MinimumWidth = 6;
-            this.DesdeChi.Name = "DesdeChi";
-            this.DesdeChi.ReadOnly = true;
-            this.DesdeChi.Width = 86;
-            // 
-            // HastaChi
-            // 
-            this.HastaChi.HeaderText = "Hasta";
-            this.HastaChi.MinimumWidth = 6;
-            this.HastaChi.Name = "HastaChi";
-            this.HastaChi.ReadOnly = true;
-            this.HastaChi.Width = 82;
-            // 
-            // FrecObsChi
-            // 
-            this.FrecObsChi.HeaderText = "FrecObs";
-            this.FrecObsChi.MinimumWidth = 6;
-            this.FrecObsChi.Name = "FrecObsChi";
-            this.FrecObsChi.ReadOnly = true;
-            // 
-            // FrecEspChi
-            // 
-            this.FrecEspChi.HeaderText = "FrecEsp";
-            this.FrecEspChi.MinimumWidth = 6;
-            this.FrecEspChi.Name = "FrecEspChi";
-            this.FrecEspChi.ReadOnly = true;
-            this.FrecEspChi.Width = 96;
-            // 
-            // Chi
-            // 
-            this.Chi.HeaderText = "c        ";
-            this.Chi.MinimumWidth = 6;
-            this.Chi.Name = "Chi";
-            this.Chi.ReadOnly = true;
-            this.Chi.Width = 87;
-            // 
-            // ChiAcumulado
-            // 
-            this.ChiAcumulado.HeaderText = "C(ac)";
-            this.ChiAcumulado.MinimumWidth = 6;
-            this.ChiAcumulado.Name = "ChiAcumulado";
-            this.ChiAcumulado.ReadOnly = true;
-            this.ChiAcumulado.Width = 77;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -672,6 +672,7 @@
             this.Controls.Add(this.lblIngreseDatos);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.Name = "Principal";
