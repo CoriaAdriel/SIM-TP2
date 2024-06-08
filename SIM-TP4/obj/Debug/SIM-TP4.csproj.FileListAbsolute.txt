@@ -1,0 +1,10 @@
+C:\Users\megap\OneDrive\Documentos\Universidad\SIM\SIM-TP4\SIM-TP4\bin\Debug\SIM-TP4.exe.config
+C:\Users\megap\OneDrive\Documentos\Universidad\SIM\SIM-TP4\SIM-TP4\bin\Debug\SIM-TP4.exe
+C:\Users\megap\OneDrive\Documentos\Universidad\SIM\SIM-TP4\SIM-TP4\bin\Debug\SIM-TP4.pdb
+C:\Users\megap\OneDrive\Documentos\Universidad\SIM\SIM-TP4\SIM-TP4\obj\Debug\SIM-TP4.csproj.AssemblyReference.cache
+C:\Users\megap\OneDrive\Documentos\Universidad\SIM\SIM-TP4\SIM-TP4\obj\Debug\SIM_TP4.PantallaPrincipal.resources
+C:\Users\megap\OneDrive\Documentos\Universidad\SIM\SIM-TP4\SIM-TP4\obj\Debug\SIM_TP4.Properties.Resources.resources
+C:\Users\megap\OneDrive\Documentos\Universidad\SIM\SIM-TP4\SIM-TP4\obj\Debug\SIM-TP4.csproj.GenerateResource.cache
+C:\Users\megap\OneDrive\Documentos\Universidad\SIM\SIM-TP4\SIM-TP4\obj\Debug\SIM-TP4.csproj.CoreCompileInputs.cache
+C:\Users\megap\OneDrive\Documentos\Universidad\SIM\SIM-TP4\SIM-TP4\obj\Debug\SIM-TP4.exe
+C:\Users\megap\OneDrive\Documentos\Universidad\SIM\SIM-TP4\SIM-TP4\obj\Debug\SIM-TP4.pdb
